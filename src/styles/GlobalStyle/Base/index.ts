@@ -7,7 +7,7 @@ const Base = createGlobalStyle`
 
     body {
         width: 100%;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
 
     button {

@@ -5,13 +5,12 @@ function Card({ strArea, strCategory, strMeal, strMealThumb }: Partial<IMeal>) {
   return (
     <S.Container>
       <S.ImageCard src={strMealThumb} />
-      <S.Card>
+      <S.TextCard>
         <S.Title>{strMeal}</S.Title>
-        <S.TextWrapper>
-          <S.Text>{strArea}</S.Text>
-          <S.Text>{strCategory}</S.Text>
-        </S.TextWrapper>
-      </S.Card>
+        <S.Text>
+          {strArea} / {strCategory}
+        </S.Text>
+      </S.TextCard>
     </S.Container>
   );
 }
