@@ -1,18 +1,14 @@
 import GlobalStyle from './styles/GlobalStyle';
-import { Card } from './components/Card';
-import { Input } from './components/Input';
-import { useMeals } from './store/meals';
+
+import { Header } from './templates/Header';
+import { Home } from './pages/Home';
 
 function App() {
-  const { meals } = useMeals();
-
   return (
     <>
       <GlobalStyle />
-      <Input />
-      {meals.map((item) => (
-        <Card {...item} key={item.idMeal} />
-      ))}
+      <Header />
+      <Home />
     </>
   );
 }

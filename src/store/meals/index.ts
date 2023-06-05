@@ -1,19 +1,39 @@
-import { api } from '@/services/api';
-import { IMeal } from '@/types/IMeal';
 import { create } from 'zustand';
+import { useMealStoreProps } from './types';
 
-type useMealsProps = {
-  meals: IMeal[];
-  execute: (mealText: string) => void;
-};
+//error test `https://httpstat.us/500`
 
-const useMeals = create<useMealsProps>((set) => ({
-  meals: [],
-  execute: async (mealText) => {
-    const response = await api.get(`/search.php?s=${mealText}`);
-    console.log(response.data.meals);
-    set({ meals: [...response.data.meals] as IMeal[] });
+const useMealStore = create<useMealStoreProps>((set) => ({
+  state: {
+    meals: [],
+    isNoMeals: false,
+    isLoading: false
+  },
+  actions: {
+    setLoading: () => {
+      set((state) => ({
+        state: { ...state.state, isLoading: true }
+      }));
+    },
+    success: (mealsArray) => {
+      set(() => ({
+        state: {
+          meals: [...mealsArray],
+          isNoMeals: false,
+          isLoading: false
+        }
+      }));
+    },
+    fail: () => {
+      set(() => ({
+        state: {
+          meals: [],
+          isNoMeals: true,
+          isLoading: false
+        }
+      }));
+    }
   }
 }));
 
-export { useMeals };
+export { useMealStore };

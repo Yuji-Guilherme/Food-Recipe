@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+const Card = styled.li`
   height: auto;
-  width: 290px;
   display: flex;
   -webkit-box-align: center;
   flex-direction: column;
@@ -13,33 +12,30 @@ const Container = styled.div`
 `;
 
 const ImageCard = styled.img`
-  height: 212px;
   width: auto;
   border-radius: 20px;
   object-fit: cover;
 
   &:hover {
-    transform: scale(1.02);
+    transform: scale(0.99);
     transition: 0.2s;
   }
 `;
 
 const TextCard = styled.div`
-  padding: 2px 6px;
+  padding: 4px 8px;
 `;
 
 const Title = styled.h3`
-  color: #373737;
-  font-size: 2rem;
-  font-weight: 600;
+  color: #3f3e3e;
+  font-weight: 500;
   overflow-wrap: break-word;
 `;
 
 const Text = styled.p`
   font-size: 1.4rem;
-
-  font-weight: 500;
-  color: #b8b2b2;
+  font-weight: 400;
+  color: #717171;
 `;
 
-export { Container, ImageCard, TextCard, Title, Text };
+export { Card, ImageCard, TextCard, Title, Text };

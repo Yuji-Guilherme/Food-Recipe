@@ -1,5 +1,27 @@
 import styled from 'styled-components';
 
+type SectionProps = {
+  up: boolean;
+};
+
+const Section = styled.section<SectionProps>`
+  width: 100%;
+  margin: 72px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  transform: translateY(${(props) => (props.up ? '0px' : '100px')});
+  transition: all 0.3s ease-out 0s;
+`;
+
+const Title = styled.h1`
+  font-size: 3.8rem;
+  font-weight: 600;
+  color: #3f3e3e;
+`;
+
 const Container = styled.div`
   background-color: #fbfbfb;
   border: 1px solid transparent;
@@ -37,4 +59,4 @@ const Input = styled.input`
   }
 `;
 
-export { Container, Input };
+export { Section, Title, Container, Input };

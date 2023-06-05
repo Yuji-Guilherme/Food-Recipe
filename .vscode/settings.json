@@ -3,5 +3,8 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true 
     },
-    "prettier.configPath": "./.prettierrc"
+    "prettier.configPath": "./.prettierrc",
+    "cSpell.words": [
+        "zustand"
+    ]
 }
