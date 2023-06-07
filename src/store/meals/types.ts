@@ -7,6 +7,7 @@ export type useMealStoreProps = {
     isNoMeals: boolean;
   };
   actions: {
+    initialState: () => void;
     setLoading: () => void;
     success: (mealsArray: IMeal[]) => void;
     fail: () => void;

@@ -10,6 +10,15 @@ const useMealStore = create<useMealStoreProps>((set) => ({
     isLoading: false
   },
   actions: {
+    initialState: () => {
+      set(() => ({
+        state: {
+          meals: [],
+          isNoMeals: false,
+          isLoading: false
+        }
+      }));
+    },
     setLoading: () => {
       set((state) => ({
         state: { ...state.state, isLoading: true }

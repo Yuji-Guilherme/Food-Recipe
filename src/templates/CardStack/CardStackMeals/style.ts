@@ -8,7 +8,7 @@ import {
 } from '@/templates/CardStack/style';
 
 const TitleMeals = styled(Title)`
-  margin: 20px 0px 16px 24px;
+  margin: 24px 0px 32px 24px;
 `;
 
 const CardStackMeals = styled(CardStack)`

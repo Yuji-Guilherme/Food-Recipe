@@ -8,9 +8,11 @@ const useCategories = () => {
     const response = await api.get('/categories.php');
     setCategories(response.data.categories);
   };
+
   useEffect(() => {
     fetch();
-  }, []);
+  });
+
   return {
     categories
   };

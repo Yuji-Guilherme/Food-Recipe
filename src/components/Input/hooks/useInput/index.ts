@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { api } from '@/services/api';
 import { useMealStore } from '@/store/meals';
 
@@ -7,8 +7,10 @@ const useInput = () => {
   const [removeBtnIsOn, setRemoveBtnIsOn] = useState(false);
   const [upInput, setUpInput] = useState(false);
   const {
-    actions: { setLoading, fail, success }
+    actions: { initialState, setLoading, fail, success }
   } = useMealStore();
+
+  useEffect(() => initialState(), [initialState]);
 
   const inputFocus = () => {
     inputRef?.current?.focus();

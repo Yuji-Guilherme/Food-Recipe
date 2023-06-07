@@ -1,10 +1,12 @@
 import * as S from './style';
 
+import { NavLink } from 'react-router-dom';
+
 function NavBar() {
   return (
     <S.NavBar>
-      <S.Selector>Home</S.Selector>
-      <S.Selector>Categories</S.Selector>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/categories">Categories</NavLink>
     </S.NavBar>
   );
 }

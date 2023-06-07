@@ -1,14 +1,13 @@
+import { router } from './routes';
 import GlobalStyle from './styles/GlobalStyle';
 
-import { Header } from './templates/Header';
-import { Home } from './pages/Home';
+import { RouterProvider } from 'react-router-dom';
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Header />
-      <Home />
+      <RouterProvider router={router} />
     </>
   );
 }

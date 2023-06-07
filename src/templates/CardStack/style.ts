@@ -18,7 +18,7 @@ const CardStack = styled.ul`
 
 const ErrorMessage = styled.h3`
   width: fit-content;
-  margin: 0 auto;
+  margin: 40px auto 0;
   font-size: 1.8rem;
   color: #3f3e3e;
   font-weight: 500;
