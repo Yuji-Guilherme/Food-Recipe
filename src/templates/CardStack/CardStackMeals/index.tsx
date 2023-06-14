@@ -14,7 +14,11 @@ function CardStackMeals({ category }: CardStackMealsProps) {
   return (
     <S.Section>
       {isNoMeals && <S.ErrorMessage>There are no recipes</S.ErrorMessage>}
-      {meals.length > 0 && <S.TitleMeals>{category} Recipes</S.TitleMeals>}
+      {meals.length > 0 && (
+        <S.TitleMeals>
+          {category} Recipe{meals.length > 1 && 's'}
+        </S.TitleMeals>
+      )}
       <S.CardStackMeals>
         {meals?.map((item) => (
           <MealsCard {...item} key={item.idMeal} />

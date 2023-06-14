@@ -1,17 +1,26 @@
-import { IMeal } from '@/types/IMeal';
+import { IMeal } from '@/types';
 import * as S from './style';
+import { useMealsCard } from './hook';
 
 function MealsCard({
   strArea,
   strCategory,
   strMeal,
-  strMealThumb
+  strMealThumb,
+  idMeal
 }: Partial<IMeal>) {
+  const { handleClick } = useMealsCard();
+
   return (
     <S.CardMeals>
-      <S.ImageCardMeals src={strMealThumb} />
+      <S.ImageCardMeals
+        src={strMealThumb}
+        onClick={() => handleClick(idMeal)}
+      />
       <S.TextCard>
-        <S.TitleMeals>{strMeal}</S.TitleMeals>
+        <S.TitleMeals onClick={() => handleClick(idMeal)}>
+          {strMeal}
+        </S.TitleMeals>
         {strArea && strCategory && (
           <S.Text>
             {strArea} / {strCategory}

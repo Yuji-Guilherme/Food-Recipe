@@ -1,5 +1,5 @@
 import { api } from '@/services/api';
-import { ICategories } from '@/types/ICategories';
+import { ICategories } from '@/types';
 import { useEffect, useState } from 'react';
 
 const useCategories = () => {

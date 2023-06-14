@@ -1,4 +1,4 @@
-import { IMeal } from '@/types/IMeal';
+import { IMeal } from '@/types';
 
 export type useMealStoreProps = {
   state: {

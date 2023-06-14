@@ -1,4 +1,4 @@
-import { ICategories } from '@/types/ICategories';
+import { ICategories } from '@/types';
 import * as S from './style';
 import { useCategoriesCard } from './hook';
 

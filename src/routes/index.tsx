@@ -3,6 +3,7 @@ import { Categories } from '@/pages/Categories';
 import { Home } from '@/pages/Home';
 import { Header } from '@/templates/Header';
 import { MealsByCategory } from '@/pages/MealsByCategory';
+import { Meal } from '@/pages/Meal';
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
       {
         path: '',
         element: <Home />
+      },
+      {
+        path: 'home',
+        element: <Navigate to={'/'} />
       },
       {
         path: 'categories',
@@ -26,8 +31,8 @@ const router = createBrowserRouter([
         element: <MealsByCategory />
       },
       {
-        path: 'home',
-        element: <Navigate to={'/'} />
+        path: 'meal/:mealId',
+        element: <Meal />
       }
     ]
   }

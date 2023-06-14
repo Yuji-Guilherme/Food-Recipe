@@ -1,6 +1,6 @@
 import { Button } from './Button';
 import * as S from './style';
-import { useInput } from './hooks/useInput';
+import { useInput } from './hook';
 import { useMealStore } from '@/store/meals';
 
 function Input() {

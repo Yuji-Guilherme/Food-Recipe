@@ -34,7 +34,6 @@ const Title = styled.h3`
 
 const Text = styled.p`
   font-size: 1.4rem;
-  font-weight: 400;
   color: #717171;
 `;
 
