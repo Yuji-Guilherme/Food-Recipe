@@ -20,10 +20,20 @@ const Title = styled.h1`
   font-weight: 600;
 `;
 
-const Tags = styled.p`
+const TagWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Tag = styled.p`
   font-size: 1.6rem;
   font-weight: 500;
   color: #717171;
+`;
+
+const TagCategory = styled(Tag)`
+  margin-left: 4px;
+  cursor: pointer;
 `;
 
 const Image = styled.img`
@@ -68,7 +78,9 @@ export {
   TextWrapper,
   Title,
   SecondaryTitle,
-  Tags,
+  TagWrapper,
+  Tag,
+  TagCategory,
   InstructionSection,
   Instruction,
   ErrorMessage

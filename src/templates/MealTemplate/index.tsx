@@ -1,5 +1,6 @@
 import { Ingredients } from '@/components/Ingredients';
 import { useMealTemplate } from './hook';
+import { useTags } from '@/hooks/useTags';
 import * as S from './style';
 
 type MealTemplateProps = {
@@ -17,15 +18,20 @@ function MealTemplate({ mealId }: MealTemplateProps) {
     mealInfo
   } = useMealTemplate(mealId);
 
+  const { handleNavigate } = useTags();
+
   return (
     <>
       <S.Section>
         {err && <S.ErrorMessage>No recipe</S.ErrorMessage>}
         <S.TextWrapper>
           <S.Title>{strMeal}</S.Title>
-          <S.Tags>
-            {strArea} / {strCategory}
-          </S.Tags>
+          <S.TagWrapper>
+            <S.Tag>{strArea} /</S.Tag>
+            <S.TagCategory onClick={() => handleNavigate(strCategory!)}>
+              {strCategory}
+            </S.TagCategory>
+          </S.TagWrapper>
         </S.TextWrapper>
         <S.Image src={strMealThumb} />
         {mealInfo && <Ingredients meal={mealInfo} />}

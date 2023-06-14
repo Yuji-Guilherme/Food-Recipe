@@ -5,10 +5,6 @@ const Card = styled.li`
   display: flex;
   -webkit-box-align: center;
   flex-direction: column;
-
-  &:hover {
-    cursor: pointer;
-  }
 `;
 
 const ImageCard = styled.img`
@@ -24,6 +20,7 @@ const ImageCard = styled.img`
 
 const TextCard = styled.div`
   padding: 4px 8px;
+  width: fit-content;
 `;
 
 const Title = styled.h3`

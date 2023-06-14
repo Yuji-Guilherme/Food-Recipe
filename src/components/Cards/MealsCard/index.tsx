@@ -1,6 +1,7 @@
 import { IMeal } from '@/types';
 import * as S from './style';
 import { useMealsCard } from './hook';
+import { useTags } from '@/hooks/useTags';
 
 function MealsCard({
   strArea,
@@ -10,6 +11,8 @@ function MealsCard({
   idMeal
 }: Partial<IMeal>) {
   const { handleClick } = useMealsCard();
+
+  const { handleNavigate } = useTags();
 
   return (
     <S.CardMeals>
@@ -22,9 +25,12 @@ function MealsCard({
           {strMeal}
         </S.TitleMeals>
         {strArea && strCategory && (
-          <S.Text>
-            {strArea} / {strCategory}
-          </S.Text>
+          <S.TextWrapper>
+            <S.Text>{strArea} /</S.Text>
+            <S.TextCategory onClick={() => handleNavigate(strCategory)}>
+              {strCategory}
+            </S.TextCategory>
+          </S.TextWrapper>
         )}
       </S.TextCard>
     </S.CardMeals>

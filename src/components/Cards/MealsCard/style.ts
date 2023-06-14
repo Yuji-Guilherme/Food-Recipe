@@ -14,10 +14,30 @@ const CardMeals = styled(Card)`
 
 const ImageCardMeals = styled(ImageCard)`
   height: 212px;
+  cursor: pointer;
 `;
 
 const TitleMeals = styled(Title)`
   font-size: 2.2rem;
+  cursor: pointer;
 `;
 
-export { CardMeals, ImageCardMeals, TitleMeals, TextCard, Text };
+const TextWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const TextCategory = styled(Text)`
+  margin-left: 4px;
+  cursor: pointer;
+`;
+
+export {
+  CardMeals,
+  ImageCardMeals,
+  TitleMeals,
+  TextCard,
+  TextWrapper,
+  Text,
+  TextCategory
+};
