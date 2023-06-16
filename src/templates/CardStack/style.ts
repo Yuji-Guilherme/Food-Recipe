@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Section = styled.section`
-  margin: 0 80px 80px;
+  margin: 24px 80px 80px;
 `;
 
 const Title = styled.h2`

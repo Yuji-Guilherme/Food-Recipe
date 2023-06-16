@@ -4,7 +4,7 @@ export type useMealStoreProps = {
   state: {
     meals: IMeal[];
     isLoading: boolean;
-    isNoMeals: boolean;
+    noMeals: boolean;
   };
   actions: {
     initialState: () => void;

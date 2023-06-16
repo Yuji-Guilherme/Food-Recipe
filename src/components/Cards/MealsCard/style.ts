@@ -29,7 +29,11 @@ const TextWrapper = styled.div`
 
 const TextCategory = styled(Text)`
   margin-left: 4px;
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+    color: black;
+    transition: 0.5s;
+  }
 `;
 
 export {

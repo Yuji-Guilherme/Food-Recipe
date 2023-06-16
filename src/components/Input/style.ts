@@ -12,7 +12,7 @@ const Section = styled.section<SectionProps>`
   align-items: center;
   justify-content: center;
   gap: 40px;
-  transform: translateY(${(props) => (props.up ? '0px' : '100px')});
+  transform: translateY(${({ up }) => (up ? '0px' : '100px')});
   transition: all 0.3s ease-out 0s;
 `;
 

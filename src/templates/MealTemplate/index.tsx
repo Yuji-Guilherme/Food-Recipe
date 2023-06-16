@@ -2,6 +2,7 @@ import { Ingredients } from '@/components/Ingredients';
 import { useMealTemplate } from './hook';
 import { useTags } from '@/hooks/useTags';
 import * as S from './style';
+import { Skeleton } from '@/components/Skeleton';
 
 type MealTemplateProps = {
   mealId: string;
@@ -9,7 +10,8 @@ type MealTemplateProps = {
 
 function MealTemplate({ mealId }: MealTemplateProps) {
   const {
-    err,
+    noMeal,
+    isLoading,
     strInstructions,
     strMeal,
     strMealThumb,
@@ -23,21 +25,57 @@ function MealTemplate({ mealId }: MealTemplateProps) {
   return (
     <>
       <S.Section>
-        {err && <S.ErrorMessage>No recipe</S.ErrorMessage>}
+        {noMeal && <S.ErrorMessage>No recipe</S.ErrorMessage>}
         <S.TextWrapper>
+          {isLoading && <Skeleton width={600} height={50} border={10} />}
           <S.Title>{strMeal}</S.Title>
           <S.TagWrapper>
-            <S.Tag>{strArea} /</S.Tag>
-            <S.TagCategory onClick={() => handleNavigate(strCategory!)}>
-              {strCategory}
-            </S.TagCategory>
+            {strArea && strCategory && (
+              <>
+                <S.Tag>{strArea} /</S.Tag>
+                <S.TagCategory onClick={() => handleNavigate(strCategory!)}>
+                  {strCategory}
+                </S.TagCategory>
+              </>
+            )}
           </S.TagWrapper>
         </S.TextWrapper>
-        <S.Image src={strMealThumb} />
+        <S.ImageWrapper>
+          {isLoading && <Skeleton width={650} height={500} border={20} />}
+          {!isLoading && <S.Image src={strMealThumb} />}
+        </S.ImageWrapper>
+        {isLoading && (
+          <div>
+            <Skeleton width={160} height={40} border={10} marginB={20} />
+            <Skeleton
+              width={234}
+              height={30}
+              border={10}
+              lines={8}
+              spacing={12}
+            />
+          </div>
+        )}
         {mealInfo && <Ingredients meal={mealInfo} />}
         <S.InstructionSection>
-          <S.SecondaryTitle>Instructions</S.SecondaryTitle>
-          <S.Instruction>{strInstructions}</S.Instruction>
+          {isLoading && (
+            <>
+              <Skeleton width={170} height={38} border={10} />
+              <Skeleton
+                width={1200}
+                height={20}
+                border={8}
+                lines={4}
+                spacing={12}
+              />
+            </>
+          )}
+          {!isLoading && (
+            <>
+              <S.SecondaryTitle>Instructions</S.SecondaryTitle>
+              <S.Instruction>{strInstructions}</S.Instruction>
+            </>
+          )}
         </S.InstructionSection>
       </S.Section>
     </>

@@ -6,7 +6,7 @@ import { useMealStoreProps } from './types';
 const useMealStore = create<useMealStoreProps>((set) => ({
   state: {
     meals: [],
-    isNoMeals: false,
+    noMeals: false,
     isLoading: false
   },
   actions: {
@@ -14,7 +14,7 @@ const useMealStore = create<useMealStoreProps>((set) => ({
       set(() => ({
         state: {
           meals: [],
-          isNoMeals: false,
+          noMeals: false,
           isLoading: false
         }
       }));
@@ -28,7 +28,7 @@ const useMealStore = create<useMealStoreProps>((set) => ({
       set(() => ({
         state: {
           meals: [...mealsArray],
-          isNoMeals: false,
+          noMeals: false,
           isLoading: false
         }
       }));
@@ -37,7 +37,7 @@ const useMealStore = create<useMealStoreProps>((set) => ({
       set(() => ({
         state: {
           meals: [],
-          isNoMeals: true,
+          noMeals: true,
           isLoading: false
         }
       }));
