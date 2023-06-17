@@ -1,6 +1,6 @@
 import { IMeal } from '@/types';
 import { api } from '@/services/api';
-import { useReducer, useEffect, useCallback } from 'react';
+import { useReducer, useEffect } from 'react';
 
 type StateProps<T> = {
   data?: T;
@@ -35,17 +35,24 @@ const useMealTemplate = (id: string) => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const fetch = useCallback(async () => {
-    dispatch({ type: 'loading' });
-    const response = await api.get(`/lookup.php?i=${id}`);
-    if (!response.data.meals) return dispatch({ type: 'error' });
-    const meal: IMeal = { ...response.data.meals[0] };
-    dispatch({ type: 'fetch', payload: meal });
-  }, [id]);
-
   useEffect(() => {
+    const controller = new AbortController();
+    const fetch = async () => {
+      dispatch({ type: 'loading' });
+      const response = await api.get(`/lookup.php?i=${id}`, {
+        signal: controller.signal
+      });
+      if (!response.data.meals) return dispatch({ type: 'error' });
+      const meal: IMeal = { ...response.data.meals[0] };
+      dispatch({ type: 'fetch', payload: meal });
+    };
+
     fetch();
-  }, [fetch]);
+
+    return () => {
+      controller.abort();
+    };
+  }, [id]);
 
   return {
     noMeal: state.noMeal,

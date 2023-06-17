@@ -11,16 +11,17 @@ const IngredientSection = styled.section`
 const IngredientsWrapper = styled.ul`
   list-style: inside;
   line-height: 2.5;
-  max-height: 420px;
+  max-height: 480px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  column-gap: 50%;
+  column-gap: 42px;
 `;
 
 const Ingredient = styled.li`
   font-size: 1.6rem;
   color: #3f3e3e;
+  max-width: 300px;
 `;
 
 export { IngredientSection, IngredientsWrapper, Ingredient, SecondaryTitle };

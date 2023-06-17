@@ -6,15 +6,22 @@ const useCategories = () => {
   const [categories, setCategories] = useState<ICategories[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const fetch = async () => {
-    const response = await api.get('/categories.php');
-    setCategories(response.data.categories);
-    setIsLoading(false);
-  };
-
   useEffect(() => {
+    const controller = new AbortController();
     setIsLoading(true);
+    const fetch = async () => {
+      const response = await api.get('/categories.php', {
+        signal: controller.signal
+      });
+      setCategories(response.data.categories);
+      setIsLoading(false);
+    };
+
     fetch();
+
+    return () => {
+      controller.abort();
+    };
   }, [setIsLoading]);
 
   return {
