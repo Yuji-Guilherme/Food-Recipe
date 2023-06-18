@@ -9,9 +9,9 @@ const IngredientSection = styled.section`
 `;
 
 const IngredientsWrapper = styled.ul`
-  list-style: inside;
-  line-height: 2.5;
   max-height: 480px;
+  line-height: 2.5;
+  list-style: inside;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -19,9 +19,9 @@ const IngredientsWrapper = styled.ul`
 `;
 
 const Ingredient = styled.li`
-  font-size: 1.6rem;
-  color: #3f3e3e;
   max-width: 300px;
+  font-size: 1.6rem;
+  color: var(--light-black);
 `;
 
 export { IngredientSection, IngredientsWrapper, Ingredient, SecondaryTitle };

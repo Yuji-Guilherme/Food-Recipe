@@ -1,23 +1,15 @@
 import { IMeal } from '@/types';
+import { StateProps, ActionProps } from './types';
 import { api } from '@/services/api';
+
 import { useReducer, useEffect } from 'react';
-
-type StateProps<T> = {
-  data?: T;
-  noMeal?: boolean;
-  isLoading?: boolean;
-};
-
-type ActionProps<T> =
-  | { type: 'loading' }
-  | { type: 'fetch'; payload: T }
-  | { type: 'error' };
+import { useErrorBoundary } from 'react-error-boundary';
 
 const useMealTemplate = (id: string) => {
   const initialState: StateProps<IMeal> = {
     data: undefined,
     noMeal: false,
-    isLoading: false
+    isLoading: true
   };
 
   const reducer = (state: StateProps<IMeal>, action: ActionProps<IMeal>) => {
@@ -34,17 +26,24 @@ const useMealTemplate = (id: string) => {
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
+  const { showBoundary } = useErrorBoundary();
 
   useEffect(() => {
     const controller = new AbortController();
+
     const fetch = async () => {
-      dispatch({ type: 'loading' });
-      const response = await api.get(`/lookup.php?i=${id}`, {
-        signal: controller.signal
-      });
-      if (!response.data.meals) return dispatch({ type: 'error' });
-      const meal: IMeal = { ...response.data.meals[0] };
-      dispatch({ type: 'fetch', payload: meal });
+      try {
+        dispatch({ type: 'loading' });
+        const response = await api.get(`/lookup.php?i=${id}`, {
+          signal: controller.signal
+        });
+        if (!response.data.meals) return dispatch({ type: 'error' });
+        const meal: IMeal = { ...response.data.meals[0] };
+        dispatch({ type: 'fetch', payload: meal });
+      } catch (error) {
+        if (error instanceof Error && error.name === 'TypeError') return;
+        showBoundary(error);
+      }
     };
 
     fetch();
@@ -52,7 +51,7 @@ const useMealTemplate = (id: string) => {
     return () => {
       controller.abort();
     };
-  }, [id]);
+  }, [id, showBoundary]);
 
   return {
     noMeal: state.noMeal,

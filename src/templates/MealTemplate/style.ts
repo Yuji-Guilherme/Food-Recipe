@@ -10,14 +10,14 @@ const Section = styled.section`
 const TextWrapper = styled.div`
   display: flex;
   align-items: baseline;
-  gap: 16px;
   grid-column: 1/3;
+  gap: 16px;
 `;
 
 const Title = styled.h1`
   font-size: 3.2rem;
-  color: #3f3e3e;
   font-weight: 600;
+  color: var(--light-black);
 `;
 
 const TagWrapper = styled.div`
@@ -28,31 +28,16 @@ const TagWrapper = styled.div`
 const Tag = styled.p`
   font-size: 1.6rem;
   font-weight: 500;
-  color: #717171;
+  color: var(--dark-grey);
 `;
 
 const TagCategory = styled(Tag)`
   margin-left: 4px;
   position: relative;
   &:hover {
-    cursor: pointer;
-    color: #3f3e3e;
+    color: var(--light-black);
     transition: 0.5s;
-    :after {
-      width: 100%;
-      left: 0;
-      background: #3f3e3e;
-    }
-  }
-  &:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    display: block;
-    right: 0;
-    transition: width 0.2s ease;
-    -webkit-transition: width 0.2s ease;
+    cursor: pointer;
   }
 `;
 
@@ -70,33 +55,33 @@ const Image = styled.img`
 `;
 
 const SecondaryTitle = styled.h2`
-  font-size: 2.6rem;
-  color: #3f3e3e;
-  font-weight: 600;
   width: 100%;
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: var(--light-black);
 `;
 
 const InstructionSection = styled.section`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  grid-column: 1/3;
   margin-top: 10px;
   margin-left: 8px;
   gap: 16px;
-  grid-column: 1/3;
 `;
 
 const Instruction = styled.p`
   font-size: 1.6rem;
-  color: #3f3e3e;
+  color: var(--light-black);
 `;
 
 const ErrorMessage = styled.h3`
   width: fit-content;
-  margin: 40px auto 0;
   font-size: 1.8rem;
-  color: #3f3e3e;
   font-weight: 500;
+  color: var(--light-black);
+  margin: 40px auto 0;
 `;
 
 export {

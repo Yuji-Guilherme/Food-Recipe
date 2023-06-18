@@ -1,6 +1,7 @@
 import { CategoriesCard } from '@/components/Cards/CategoriesCard';
 import { Skeleton } from '@/components/Skeleton';
 import { useCategories } from './hook';
+
 import * as S from './style';
 
 function CardStackCategories() {

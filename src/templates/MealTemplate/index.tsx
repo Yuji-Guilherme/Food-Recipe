@@ -1,8 +1,9 @@
-import { Ingredients } from '@/components/Ingredients';
-import { useMealTemplate } from './hook';
-import { useTags } from '@/hooks/useTags';
-import * as S from './style';
 import { Skeleton } from '@/components/Skeleton';
+import { Ingredients } from '@/components/Ingredients';
+import { useTags } from '@/hooks/useTags';
+import { useMealTemplate } from './hook';
+
+import * as S from './style';
 
 type MealTemplateProps = {
   mealId: string;

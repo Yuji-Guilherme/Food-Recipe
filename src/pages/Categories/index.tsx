@@ -1,4 +1,5 @@
 import { CardStackCategories } from '@/templates/CardStack';
+
 import * as S from './style';
 
 function Categories() {

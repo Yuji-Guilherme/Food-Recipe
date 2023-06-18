@@ -1,5 +1,6 @@
-import styled, { css, keyframes } from 'styled-components';
 import { SkeletonProps } from '.';
+
+import styled, { css, keyframes } from 'styled-components';
 
 type SkeletonContainerProps = Pick<
   SkeletonProps,
@@ -18,8 +19,8 @@ const SkeletonContainer = styled.div<SkeletonContainerProps>`
     width: ${width}px;
     display: flex;
     flex-direction: column;
-    gap: ${spacing}px;
     margin-bottom: ${marginB}px;
+    gap: ${spacing}px;
   `}
 `;
 

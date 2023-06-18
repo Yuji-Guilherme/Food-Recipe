@@ -1,7 +1,7 @@
 import { CardStackMeals } from '@/templates/CardStack';
+import { useMealByCategory } from './hook';
 
 import * as S from './style';
-import { useMealByCategory } from './hook';
 
 function MealsByCategory() {
   const { mealCategory } = useMealByCategory();

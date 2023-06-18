@@ -1,6 +1,7 @@
 import { ICategories } from '@/types';
-import * as S from './style';
 import { useCategoriesCard } from './hook';
+
+import * as S from './style';
 
 function CategoriesCard({
   strCategory,

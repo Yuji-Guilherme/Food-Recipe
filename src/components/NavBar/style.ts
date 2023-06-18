@@ -12,18 +12,18 @@ const NavBar = styled.nav`
   gap: 60px;
 
   & > a {
-    color: #959595;
     font-weight: 500;
     font-size: 1.4rem;
+    color: var(--medium-grey);
 
     &:hover {
-      cursor: pointer;
-      color: #3f3e3e;
+      color: var(--light-black);
       transition: 0.2s;
+      cursor: pointer;
     }
 
     &.active {
-      color: #3f3e3e;
+      color: var(--light-black);
     }
   }
 `;

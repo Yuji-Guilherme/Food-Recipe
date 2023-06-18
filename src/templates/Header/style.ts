@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 const Header = styled.header`
   width: 100%;
-  position: sticky;
   top: 0px;
+  position: sticky;
   z-index: 99;
 `;
 

@@ -31,7 +31,7 @@ const TextCategory = styled(Text)`
   margin-left: 4px;
   &:hover {
     cursor: pointer;
-    color: black;
+    color: var(--light-black);
     transition: 0.5s;
   }
 `;

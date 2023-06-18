@@ -6,8 +6,8 @@ const Section = styled.section`
 
 const Title = styled.h2`
   font-size: 3.2rem;
-  color: #3f3e3e;
   font-weight: 600;
+  color: var(--light-black);
 `;
 
 const CardStack = styled.ul`
@@ -18,10 +18,10 @@ const CardStack = styled.ul`
 
 const ErrorMessage = styled.h3`
   width: fit-content;
-  margin: 40px auto 0;
   font-size: 1.8rem;
-  color: #3f3e3e;
   font-weight: 500;
+  color: var(--light-black);
+  margin: 40px auto 0;
 `;
 
 export { Section, Title, CardStack, ErrorMessage };

@@ -6,11 +6,11 @@ type SectionProps = {
 
 const Section = styled.section<SectionProps>`
   width: 100%;
-  margin: 72px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 72px 0;
   gap: 40px;
   transform: translateY(${({ up }) => (up ? '0px' : '100px')});
   transition: all 0.3s ease-out 0s;
@@ -19,42 +19,42 @@ const Section = styled.section<SectionProps>`
 const Title = styled.h1`
   font-size: 3.8rem;
   font-weight: 600;
-  color: #3f3e3e;
+  color: var(--light-black);
 `;
 
 const Container = styled.div`
-  background-color: #fbfbfb;
-  border: 1px solid transparent;
-  border-radius: 24px;
-  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
   height: 50px;
   width: 50%;
   min-width: 350px;
   max-width: 600px;
+  background-color: var(--input-color);
+  border: 1px solid transparent;
+  border-radius: 24px;
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
   display: flex;
   align-items: center;
   padding: 0 20px;
 
   &:hover {
-    cursor: pointer;
     box-shadow: 0 2px 5px 2px rgb(64 60 67 / 18%);
+    cursor: pointer;
   }
 `;
 
 const Input = styled.input`
   width: 100%;
+  font-size: 1.4rem;
   background-color: transparent;
   border: none;
-  font-size: 1.4rem;
 
   &::placeholder {
-    color: #b8b2b2;
+    color: var(--light-grey);
   }
   &:focus {
     outline: none;
 
     ~ button:last-of-type > svg {
-      color: #434343;
+      color: var(--light-black);
     }
   }
 `;

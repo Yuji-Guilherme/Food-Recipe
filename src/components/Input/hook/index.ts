@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from 'react';
 import { api } from '@/services/api';
 import { useMealStore } from '@/store/meals';
+
+import { useEffect, useRef, useState } from 'react';
 
 const useInput = () => {
   const inputRef = useRef<HTMLInputElement>(null);

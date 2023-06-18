@@ -1,5 +1,6 @@
 import { IMeal } from '@/types';
 import { useIngredients } from './hook';
+
 import * as S from './style';
 
 type IngredientsProps = {

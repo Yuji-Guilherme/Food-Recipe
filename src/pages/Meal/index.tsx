@@ -1,6 +1,8 @@
 import { MealTemplate } from '@/templates/MealTemplate';
-import * as S from './style';
+
 import { useParams } from 'react-router-dom';
+
+import * as S from './style';
 
 function Meal() {
   const { mealId } = useParams();

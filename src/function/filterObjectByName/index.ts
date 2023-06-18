@@ -6,6 +6,7 @@ type filterObjByNameProps<T> = {
 
 const filterObjByName: filterObjByNameProps<IMeal> = (data, startName) => {
   const asArray = Object.entries(data);
+
   const filtered = asArray.filter(([key, value]) => {
     return (
       key.startsWith(startName) && typeof value === 'string' && value != ''

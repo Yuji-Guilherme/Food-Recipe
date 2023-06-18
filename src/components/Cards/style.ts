@@ -19,19 +19,19 @@ const ImageCard = styled.img`
 `;
 
 const TextCard = styled.div`
-  padding: 4px 8px;
   width: fit-content;
+  padding: 4px 8px;
 `;
 
 const Title = styled.h3`
-  color: #3f3e3e;
   font-weight: 500;
+  color: var(--light-black);
   overflow-wrap: break-word;
 `;
 
 const Text = styled.p`
   font-size: 1.4rem;
-  color: #717171;
+  color: var(--dark-grey);
 `;
 
 export { Card, ImageCard, TextCard, Title, Text };

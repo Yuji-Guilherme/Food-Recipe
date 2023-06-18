@@ -1,6 +1,6 @@
-import * as S from './style';
-
 import { NavLink } from 'react-router-dom';
+
+import * as S from './style';
 
 function NavBar() {
   return (

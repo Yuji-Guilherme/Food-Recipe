@@ -1,8 +1,10 @@
+import { NavBar } from '@/components/NavBar';
+import { ErrorFallback } from '@/components/ErrorFallback';
+
 import { Outlet } from 'react-router-dom';
+import { ErrorBoundary } from 'react-error-boundary';
 
 import * as S from './style';
-
-import { NavBar } from '@/components/NavBar';
 
 function Header() {
   return (
@@ -10,7 +12,9 @@ function Header() {
       <S.Header>
         <NavBar />
       </S.Header>
-      <Outlet />
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <Outlet />
+      </ErrorBoundary>
     </>
   );
 }

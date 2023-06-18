@@ -1,7 +1,8 @@
 import { IMeal } from '@/types';
-import * as S from './style';
 import { useMealsCard } from './hook';
 import { useTags } from '@/hooks/useTags';
+
+import * as S from './style';
 
 function MealsCard({
   strArea,

@@ -1,7 +1,8 @@
+import { ButtonHTMLAttributes } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import { AiOutlineSearch } from 'react-icons/ai';
+
 import * as S from './style';
-import { ButtonHTMLAttributes } from 'react';
 
 type ButtonProps = {
   buttonType: 'search' | 'remove';

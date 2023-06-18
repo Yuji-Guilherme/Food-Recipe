@@ -1,20 +1,30 @@
-import { api } from '@/services/api';
 import { ICategories } from '@/types';
+import { api } from '@/services/api';
+
 import { useEffect, useState } from 'react';
+import { useErrorBoundary } from 'react-error-boundary';
 
 const useCategories = () => {
   const [categories, setCategories] = useState<ICategories[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const { showBoundary } = useErrorBoundary();
 
   useEffect(() => {
     const controller = new AbortController();
+
     setIsLoading(true);
+
     const fetch = async () => {
-      const response = await api.get('/categories.php', {
-        signal: controller.signal
-      });
-      setCategories(response.data.categories);
-      setIsLoading(false);
+      try {
+        const response = await api.get('categories.php', {
+          signal: controller.signal
+        });
+        setCategories(response.data.categories);
+        setIsLoading(false);
+      } catch (error) {
+        if (error instanceof Error && error.name === 'TypeError') return;
+        showBoundary(error);
+      }
     };
 
     fetch();
@@ -22,7 +32,7 @@ const useCategories = () => {
     return () => {
       controller.abort();
     };
-  }, [setIsLoading]);
+  }, [setIsLoading, showBoundary]);
 
   return {
     isLoading,

@@ -1,7 +1,6 @@
-import { create } from 'zustand';
 import { useMealStoreProps } from './types';
 
-//error test `https://httpstat.us/500`
+import { create } from 'zustand';
 
 const useMealStore = create<useMealStoreProps>((set) => ({
   state: {
