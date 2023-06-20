@@ -26,8 +26,8 @@ Na aplicação é possível:
 ## 💀 Skeleton Loading
 ![Skeleton](https://github.com/Yuji-Guilherme/Food-Recipe/assets/102609444/260c8d0b-5f4c-4316-b459-fb3fab39254c)
 
-## ❌ Página de erro
-![error boundary](https://github.com/Yuji-Guilherme/Food-Recipe/assets/102609444/0aa3182c-e808-43cf-97ff-0434de2120c6)
-
 ## Página não encontrada
 ![Notfound](https://github.com/Yuji-Guilherme/Food-Recipe/assets/102609444/1c7bbcb3-4712-4485-a5a3-33698b561a8f)
+
+## ❌ Página de erro
+![error boundary](https://github.com/Yuji-Guilherme/Food-Recipe/assets/102609444/0aa3182c-e808-43cf-97ff-0434de2120c6)
