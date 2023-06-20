@@ -21,7 +21,7 @@ function Input() {
 
   return (
     <S.Section up={meals.length > 0 ? true : upInput}>
-      <S.Title>Get cooking today!</S.Title>
+      <S.Title>Make your own food!</S.Title>
       <S.Container
         onClick={() => handleInputFocus()}
         onBlur={() => verifyInput()}
@@ -29,7 +29,7 @@ function Input() {
         <S.Input
           type="text"
           ref={inputRef}
-          placeholder="Search recipe"
+          placeholder="find a recipe"
           onChange={() => verifyInput()}
           onKeyPress={(e) => {
             if (e.key === 'Enter') handleSearch();

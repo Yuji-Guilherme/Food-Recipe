@@ -6,19 +6,23 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 20vh;
   gap: 20px;
 `;
 
 const Title = styled.h1`
+  max-width: 90%;
   font-size: 3rem;
   font-weight: 500;
   color: var(--light-black);
+  text-align: center;
 `;
 
 const Description = styled.p`
+  max-width: 90%;
   font-size: 1.8rem;
   color: var(--light-black);
+  text-align: center;
 `;
 
 const Button = styled.button`
@@ -28,6 +32,7 @@ const Button = styled.button`
   padding: 8px;
   border: 2px solid var(--light-black);
   border-radius: 8px;
+
   &:hover {
     color: white;
     background-color: var(--light-black);

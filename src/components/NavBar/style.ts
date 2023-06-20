@@ -26,6 +26,10 @@ const NavBar = styled.nav`
       color: var(--light-black);
     }
   }
+
+  @media only screen and (max-device-width: 450px) {
+    box-shadow: rgb(220, 220, 220) 0px 1px 0px inset;
+  }
 `;
 
 export { NavBar };

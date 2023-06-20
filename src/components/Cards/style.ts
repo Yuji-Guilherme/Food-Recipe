@@ -32,6 +32,11 @@ const Title = styled.h3`
 const Text = styled.p`
   font-size: 1.4rem;
   color: var(--dark-grey);
+
+  @media only screen and (max-device-width: 450px) {
+    font-size: 1.6rem;
+    color: white;
+  }
 `;
 
 export { Card, ImageCard, TextCard, Title, Text };

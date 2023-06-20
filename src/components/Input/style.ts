@@ -14,12 +14,32 @@ const Section = styled.section<SectionProps>`
   gap: 40px;
   transform: translateY(${({ up }) => (up ? '0px' : '100px')});
   transition: all 0.3s ease-out 0s;
+
+  @media only screen and (max-device-width: 1024px) {
+    transform: translateY(${({ up }) => (up ? '0px' : '70px')});
+  }
+
+  @media only screen and (max-device-width: 450px) {
+    align-items: flex-start;
+    margin: 28px 0;
+    gap: 10px;
+    transform: translateY(0px);
+  }
 `;
 
 const Title = styled.h1`
   font-size: 3.8rem;
   font-weight: 600;
   color: var(--light-black);
+
+  @media only screen and (max-device-width: 1024px) {
+    font-size: 3rem;
+  }
+
+  @media only screen and (max-device-width: 450px) {
+    font-size: 2.5rem;
+    margin-left: 20px;
+  }
 `;
 
 const Container = styled.div`
@@ -39,6 +59,28 @@ const Container = styled.div`
     box-shadow: 0 2px 5px 2px rgb(64 60 67 / 18%);
     cursor: pointer;
   }
+
+  @media only screen and (max-device-width: 1024px) {
+    width: 47%;
+  }
+
+  @media only screen and (max-device-width: 450px) {
+    width: 90%;
+    background-color: transparent;
+    padding: 0px 10px;
+    margin: 0px auto;
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 2px solid #beb3b38f;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:focus-within {
+      border-bottom: 1px solid var(--light-black);
+    }
+  }
 `;
 
 const Input = styled.input`
@@ -50,6 +92,7 @@ const Input = styled.input`
   &::placeholder {
     color: var(--light-grey);
   }
+
   &:focus {
     outline: none;
 

@@ -6,6 +6,11 @@ const IngredientSection = styled.section`
   flex-wrap: wrap;
   align-content: flex-start;
   row-gap: 20px;
+
+  @media only screen and (max-device-width: 1024px) {
+    column-gap: 80px;
+    margin-top: 12px;
+  }
 `;
 
 const IngredientsWrapper = styled.ul`
@@ -16,6 +21,15 @@ const IngredientsWrapper = styled.ul`
   flex-direction: column;
   flex-wrap: wrap;
   column-gap: 42px;
+
+  @media only screen and (max-device-width: 1024px) {
+    column-gap: 80px;
+    padding-left: 32px;
+  }
+
+  @media only screen and (max-device-width: 450px) {
+    max-height: max-content;
+  }
 `;
 
 const Ingredient = styled.li`

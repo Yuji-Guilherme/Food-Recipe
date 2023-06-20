@@ -10,7 +10,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 14vh;
   gap: 50px;
 `;
 
@@ -39,6 +39,7 @@ const Button = styled.button`
   padding: 12px;
   border: 2px solid var(--light-black);
   border-radius: 8px;
+
   &:hover {
     color: white;
     background-color: var(--light-black);

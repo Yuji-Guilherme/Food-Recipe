@@ -5,6 +5,12 @@ const Header = styled.header`
   top: 0px;
   position: sticky;
   z-index: 99;
+
+  @media only screen and (max-device-width: 450px) {
+    top: auto;
+    bottom: 0px;
+    position: fixed;
+  }
 `;
 
 export { Header };

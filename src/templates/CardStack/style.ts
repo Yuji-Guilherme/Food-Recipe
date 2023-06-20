@@ -8,6 +8,10 @@ const Title = styled.h2`
   font-size: 3.2rem;
   font-weight: 600;
   color: var(--light-black);
+
+  @media only screen and (max-device-width: 450px) {
+    font-size: 2.2rem;
+  }
 `;
 
 const CardStack = styled.ul`

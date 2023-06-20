@@ -32,8 +32,9 @@ const useMealTemplate = (id: string) => {
     const controller = new AbortController();
 
     const fetch = async () => {
+      dispatch({ type: 'loading' });
+
       try {
-        dispatch({ type: 'loading' });
         const response = await api.get(`/lookup.php?i=${id}`, {
           signal: controller.signal
         });

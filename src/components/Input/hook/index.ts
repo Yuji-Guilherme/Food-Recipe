@@ -17,6 +17,10 @@ const useInput = () => {
     inputRef?.current?.focus();
   };
 
+  const inputBlur = () => {
+    inputRef?.current?.blur();
+  };
+
   const inputClear = () => {
     inputRef.current!.value = '';
   };
@@ -25,10 +29,12 @@ const useInput = () => {
     if (inputRef.current!.value.trim() === '') return setRemoveBtnIsOn(false);
     setRemoveBtnIsOn(true);
   };
+
   const handleInputFocus = () => {
     inputFocus();
     verifyInput();
   };
+
   const handleRemove = () => {
     inputClear();
     inputFocus();
@@ -39,6 +45,7 @@ const useInput = () => {
     if (mealSearch.trim() === '') return;
     setUpInput(true);
     fetchSearch(mealSearch);
+    inputBlur();
   };
 
   const fetchSearch = async (mealSearch: string) => {

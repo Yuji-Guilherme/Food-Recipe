@@ -17,11 +17,10 @@ function MealsCard({
 
   return (
     <S.CardMeals>
-      <S.ImageCardMeals
-        src={strMealThumb}
-        onClick={() => handleClick(idMeal)}
-      />
-      <S.TextCard>
+      <S.ImageWrapper onClick={() => handleClick(idMeal)}>
+        <S.ImageCardMeals src={strMealThumb} />
+      </S.ImageWrapper>
+      <S.TextMealsCard>
         <S.TitleMeals onClick={() => handleClick(idMeal)}>
           {strMeal}
         </S.TitleMeals>
@@ -33,7 +32,7 @@ function MealsCard({
             </S.TextCategory>
           </S.TextWrapper>
         )}
-      </S.TextCard>
+      </S.TextMealsCard>
     </S.CardMeals>
   );
 }

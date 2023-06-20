@@ -9,6 +9,8 @@ export type SkeletonProps = {
   border2?: number;
   lines?: number;
   marginB?: number;
+  smallHeight?: number;
+  smWidthPercent?: number;
 };
 
 function Skeleton({
@@ -19,12 +21,24 @@ function Skeleton({
   border2 = 0,
   height2 = 0,
   lines = 1,
-  marginB = 0
+  marginB = 0,
+  smallHeight = 0,
+  smWidthPercent = 0
 }: SkeletonProps) {
   return (
-    <S.SkeletonContainer width={width} spacing={spacing} marginB={marginB}>
+    <S.SkeletonContainer
+      width={width}
+      spacing={spacing}
+      smWidthPercent={smWidthPercent}
+      marginB={marginB}
+    >
       {[...Array(lines)].map((_, index) => (
-        <S.SkeletonContent key={index} height={height} border={border} />
+        <S.SkeletonContent
+          key={index}
+          height={height}
+          smallHeight={smallHeight}
+          border={border}
+        />
       ))}
       {height2 ? <S.SkeletonContent height={height2} border={border2} /> : ''}
     </S.SkeletonContainer>

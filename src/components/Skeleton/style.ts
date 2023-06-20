@@ -4,10 +4,13 @@ import styled, { css, keyframes } from 'styled-components';
 
 type SkeletonContainerProps = Pick<
   SkeletonProps,
-  'width' | 'spacing' | 'marginB'
+  'width' | 'spacing' | 'marginB' | 'smWidthPercent'
 >;
 
-type SkeletonContentProps = Pick<SkeletonProps, 'height' | 'border'>;
+type SkeletonContentProps = Pick<
+  SkeletonProps,
+  'height' | 'border' | 'smallHeight'
+>;
 
 const animation = keyframes`
  from { background-position-x: 0% }
@@ -15,17 +18,21 @@ const animation = keyframes`
 `;
 
 const SkeletonContainer = styled.div<SkeletonContainerProps>`
-  ${({ width, spacing, marginB }) => css`
+  ${({ width, spacing, marginB, smWidthPercent }) => css`
     width: ${width}px;
     display: flex;
     flex-direction: column;
     margin-bottom: ${marginB}px;
     gap: ${spacing}px;
+
+    @media only screen and (max-device-width: 450px) {
+      width: ${smWidthPercent ? `${smWidthPercent}%` : `${width}px`};
+    }
   `}
 `;
 
 const SkeletonContent = styled.div<SkeletonContentProps>`
-  ${({ height, border }) => css`
+  ${({ height, border, smallHeight }) => css`
     height: ${height}px;
     width: 100%;
     border-radius: ${border}px;
@@ -34,6 +41,10 @@ const SkeletonContent = styled.div<SkeletonContentProps>`
     background-size: 400% 400%;
     cursor: progress;
     animation: ${animation} 1.2s ease-in-out infinite;
+
+    @media only screen and (max-device-width: 450px) {
+      height: ${smallHeight}px;
+    }
   `}
 `;
 

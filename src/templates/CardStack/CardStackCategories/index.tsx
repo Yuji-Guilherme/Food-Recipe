@@ -8,7 +8,7 @@ function CardStackCategories() {
   const { isLoading, categories } = useCategories();
 
   return (
-    <S.Section>
+    <S.SectionCategories>
       <S.TitleCategories>Categories</S.TitleCategories>
       <S.CardStackCategories>
         {isLoading &&
@@ -21,13 +21,15 @@ function CardStackCategories() {
               spacing={10}
               border={20}
               border2={8}
+              smWidthPercent={88}
+              smallHeight={82}
             />
           ))}
         {categories?.map((item) => (
           <CategoriesCard {...item} key={item.idCategory} />
         ))}
       </S.CardStackCategories>
-    </S.Section>
+    </S.SectionCategories>
   );
 }
 
