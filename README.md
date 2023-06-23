@@ -22,6 +22,7 @@ Na aplicação é possível:
 - ``Prettier``
 - ``React Icons``
 - ``Skeleton Loading``
+- ``Abort Controller``
 
 ## 💀 Skeleton Loading
 ![Skeleton](https://github.com/Yuji-Guilherme/Food-Recipe/assets/102609444/260c8d0b-5f4c-4316-b459-fb3fab39254c)
