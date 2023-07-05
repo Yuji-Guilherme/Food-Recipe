@@ -11,8 +11,6 @@ const useInput = () => {
     actions: { initialState, setLoading, fail, success }
   } = useMealStore();
 
-  useEffect(() => initialState(), [initialState]);
-
   const inputFocus = () => {
     inputRef?.current?.focus();
   };
@@ -26,7 +24,8 @@ const useInput = () => {
   };
 
   const verifyInput = () => {
-    if (inputRef.current!.value.trim() === '') return setRemoveBtnIsOn(false);
+    const currentValue = inputRef.current!.value;
+    if (!currentValue) return setRemoveBtnIsOn(false);
     setRemoveBtnIsOn(true);
   };
 
@@ -42,19 +41,24 @@ const useInput = () => {
 
   const handleSearch = () => {
     const mealSearch = inputRef.current!.value;
-    if (mealSearch.trim() === '') return;
-    setUpInput(true);
+    if (!mealSearch) return;
+
+    if (!upInput) setUpInput(true); //takedown next pipe
     fetchSearch(mealSearch);
     inputBlur();
   };
 
   const fetchSearch = async (mealSearch: string) => {
     setLoading();
+
     const response = await api.get(`/search.php?s=${mealSearch}`);
     const mealsData = response.data.meals;
+
     if (!mealsData) return fail();
     return success(mealsData);
   };
+
+  useEffect(() => initialState(), [initialState]);
 
   return {
     inputRef,

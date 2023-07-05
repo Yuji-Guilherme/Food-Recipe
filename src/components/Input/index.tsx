@@ -1,6 +1,5 @@
 import { Button } from './Button';
 import { useInput } from './hook';
-import { useMealStore } from '@/store/meals';
 
 import * as S from './style';
 
@@ -15,12 +14,8 @@ function Input() {
     handleSearch
   } = useInput();
 
-  const {
-    state: { meals }
-  } = useMealStore();
-
   return (
-    <S.Section up={meals.length > 0 ? true : upInput}>
+    <S.Section up={upInput}>
       <S.Title>Make your own food!</S.Title>
       <S.Container
         onClick={() => handleInputFocus()}
