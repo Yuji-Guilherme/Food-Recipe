@@ -1,4 +1,4 @@
-import { CategoriesCard } from '@/components/Cards/CategoriesCard';
+import { CategoriesCard } from '@/components/Cards';
 import { Skeleton } from '@/components/Skeleton';
 import { useCategories } from './hook';
 

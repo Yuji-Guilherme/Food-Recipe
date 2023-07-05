@@ -1,7 +1,7 @@
 import { IMeal } from '@/types';
 
-type filterObjByNameProps<T> = {
-  (data: T, startName: string): { [startName: string]: string }[];
+type filterObjByNameProps<Data> = {
+  (data: Data, startName: string): { [startName: string]: string }[];
 };
 
 const filterObjByName: filterObjByNameProps<IMeal> = (data, startName) => {

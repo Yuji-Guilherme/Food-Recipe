@@ -1,6 +1,7 @@
 import { IMeal } from '@/types';
 import { StateProps, ActionProps } from './types';
 import { api } from '@/services/api';
+import { isTypeError } from '@/function';
 
 import { useReducer, useEffect } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
@@ -42,7 +43,7 @@ const useMealTemplate = (id: string) => {
         const meal: IMeal = { ...response.data.meals[0] };
         dispatch({ type: 'fetch', payload: meal });
       } catch (error) {
-        if (error instanceof Error && error.name === 'TypeError') return;
+        if (isTypeError(error)) return;
         showBoundary(error);
       }
     };

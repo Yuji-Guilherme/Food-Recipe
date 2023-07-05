@@ -1,5 +1,6 @@
 import { api } from '@/services/api';
 import { useMealStore } from '@/store/meals';
+import { isTypeError } from '@/function';
 
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -26,7 +27,7 @@ const useMealByCategory = () => {
         if (!mealsData) return fail();
         return success(mealsData);
       } catch (error) {
-        if (error instanceof Error && error.name === 'TypeError') return;
+        if (isTypeError(error)) return;
         showBoundary(error);
       }
     };

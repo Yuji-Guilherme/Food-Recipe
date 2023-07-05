@@ -1,5 +1,6 @@
 import { ICategories } from '@/types';
 import { api } from '@/services/api';
+import { isTypeError } from '@/function';
 
 import { useEffect, useState } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
@@ -19,10 +20,11 @@ const useCategories = () => {
         const response = await api.get('categories.php', {
           signal: controller.signal
         });
-        setCategories(response.data.categories);
+
+        setCategories(response!.data.categories);
         setIsLoading(false);
       } catch (error) {
-        if (error instanceof Error && error.name === 'TypeError') return;
+        if (isTypeError(error)) return;
         showBoundary(error);
       }
     };
