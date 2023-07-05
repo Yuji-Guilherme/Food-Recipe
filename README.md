@@ -1,4 +1,4 @@
-# 🍴 Food-Recipe
+# 🍴 Free-Recipe
 ![Search](https://github.com/Yuji-Guilherme/Food-Recipe/assets/102609444/cf0dfb11-abfe-44e3-9bfb-6b65f539854e)
 
 ## ✔ Resumodo do projeto
