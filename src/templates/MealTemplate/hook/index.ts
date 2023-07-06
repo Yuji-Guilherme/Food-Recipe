@@ -1,7 +1,7 @@
 import { IMeal } from '@/types';
 import { StateProps, ActionProps } from './types';
 import { api } from '@/services/api';
-import { isTypeError } from '@/function';
+import { isTypeError } from '@/functions';
 
 import { useReducer, useEffect } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';

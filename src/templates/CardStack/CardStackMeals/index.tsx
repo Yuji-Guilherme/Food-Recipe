@@ -1,6 +1,6 @@
 import * as S from './style';
 import { useMealStore } from '@/store/meals';
-import { MealsCard } from '@/components/Cards/MealsCard';
+import { MealsCard } from '@/components/Cards';
 import { Skeleton } from '@/components/Skeleton';
 
 type CardStackMealsProps = {

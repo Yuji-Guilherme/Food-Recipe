@@ -1,6 +1,6 @@
 import { api } from '@/services/api';
 import { useMealStore } from '@/store/meals';
-import { isTypeError } from '@/function';
+import { isTypeError } from '@/functions';
 
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';

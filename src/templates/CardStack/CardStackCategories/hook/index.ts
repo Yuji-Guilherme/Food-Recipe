@@ -1,6 +1,6 @@
 import { ICategories } from '@/types';
 import { api } from '@/services/api';
-import { isTypeError } from '@/function';
+import { isTypeError } from '@/functions';
 
 import { useEffect, useState } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';

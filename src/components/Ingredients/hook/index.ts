@@ -1,5 +1,5 @@
 import { IMeal, IIngredients } from '@/types';
-import { filterObjByName, mergeArray } from '@/function';
+import { filterObjByName, mergeArray } from '@/functions';
 
 import { useEffect, useState } from 'react';
 
