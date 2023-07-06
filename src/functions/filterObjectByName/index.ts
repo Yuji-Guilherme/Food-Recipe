@@ -1,10 +1,8 @@
 import { IMeal } from '@/types';
 import { partialize, pipe } from '@/functions';
-import {
-  arrayToObjectKeyArray,
-  dataToArray,
-  filterArrayByInitialName
-} from './subfunctions';
+import { dataToArray } from './dataToArray';
+import { arrayToObjectKeyArray } from './arrayToObjectKeyArray';
+import { filterArrayByInitialName } from './filterArrayByInitialName';
 
 type filterObjByNameProps<Data> = {
   (data: Data, startName: string): { [startName: string]: string }[];
