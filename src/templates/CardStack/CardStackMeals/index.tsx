@@ -1,16 +1,14 @@
 import * as S from './style';
-import { useMealStore } from '@/store/meals';
 import { MealsCard } from '@/components/Cards';
 import { Skeleton } from '@/components/Skeleton';
+import { useMeals } from './hook';
 
 type CardStackMealsProps = {
   category?: string;
 };
 
 function CardStackMeals({ category }: CardStackMealsProps) {
-  const {
-    state: { meals, isLoading, noMeals }
-  } = useMealStore();
+  const { meals, isLoading, noMeals } = useMeals(category);
 
   return (
     <S.SectionMeals>
@@ -25,9 +23,9 @@ function CardStackMeals({ category }: CardStackMealsProps) {
             smWidthPercent={45}
           />
         )}
-        {meals.length > 0 && !isLoading && (
+        {meals!.length > 0 && !isLoading && (
           <S.Title>
-            {category} Recipe{meals.length > 1 && 's'}
+            {category} Recipe{meals!.length > 1 && 's'}
           </S.Title>
         )}
       </S.TitleWrapper>

@@ -1,4 +1,3 @@
-import { api } from '@/services/api';
 import { useMealStore } from '@/store/meals';
 
 import { useEffect, useRef, useState } from 'react';
@@ -8,8 +7,10 @@ const useInput = () => {
   const [removeBtnIsOn, setRemoveBtnIsOn] = useState(false);
   const [upInput, setUpInput] = useState(false);
   const {
-    actions: { initialState, setLoading, fail, success }
+    actions: { initialState, setSearchMeal }
   } = useMealStore();
+
+  useEffect(() => initialState(), [initialState]);
 
   const inputFocus = () => {
     inputRef?.current?.focus();
@@ -40,25 +41,13 @@ const useInput = () => {
   };
 
   const handleSearch = () => {
-    const mealSearch = inputRef.current!.value;
-    if (!mealSearch) return;
+    const searchMeal = inputRef.current!.value;
+    if (!searchMeal) return;
 
-    if (!upInput) setUpInput(true); //takedown next pipe
-    fetchSearch(mealSearch);
+    if (!upInput) setUpInput(true);
+    setSearchMeal(searchMeal);
     inputBlur();
   };
-
-  const fetchSearch = async (mealSearch: string) => {
-    setLoading();
-
-    const response = await api.get(`/search.php?s=${mealSearch}`);
-    const mealsData = response.data.meals;
-
-    if (!mealsData) return fail();
-    return success(mealsData);
-  };
-
-  useEffect(() => initialState(), [initialState]);
 
   return {
     inputRef,

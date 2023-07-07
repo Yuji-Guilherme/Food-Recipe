@@ -8,7 +8,6 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error instanceof AxiosError && error.name != 'CanceledError') {
-      console.log(error);
       throw new Error(error.message);
     }
   }

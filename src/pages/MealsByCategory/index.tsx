@@ -1,10 +1,10 @@
 import { CardStackMeals } from '@/templates/CardStack';
-import { useMealByCategory } from './hook';
-
 import * as S from './style';
 
+import { useParams } from 'react-router-dom';
+
 function MealsByCategory() {
-  const { mealCategory } = useMealByCategory();
+  const { mealCategory } = useParams();
 
   return (
     <S.Main>
