@@ -1,40 +1,34 @@
 import { ICategories } from '@/types';
-import { api } from '@/services/api';
-import { isTypeError } from '@/functions';
 
 import { useEffect, useState } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
+import { useUtilsStore } from '@/store/utils';
+import { fetchService } from '@/services/fetch';
 
 const useCategories = () => {
   const [categories, setCategories] = useState<ICategories[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
   const { showBoundary } = useErrorBoundary();
+  const {
+    state: { isLoading },
+    actions: { setLoading }
+  } = useUtilsStore();
 
   useEffect(() => {
     const controller = new AbortController();
 
-    setIsLoading(true);
-
-    const fetch = async () => {
-      try {
-        const response = await api.get('categories.php', {
-          signal: controller.signal
-        });
-
-        setCategories(response!.data.categories);
-        setIsLoading(false);
-      } catch (error) {
-        if (isTypeError(error)) return;
-        showBoundary(error);
-      }
-    };
-
-    fetch();
+    fetchService(
+      'categories.php',
+      'categories',
+      setLoading,
+      setCategories,
+      showBoundary,
+      controller
+    );
 
     return () => {
       controller.abort();
     };
-  }, [setIsLoading, showBoundary]);
+  }, [setLoading, showBoundary]);
 
   return {
     isLoading,

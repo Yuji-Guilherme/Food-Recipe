@@ -1,45 +1,49 @@
-import { isTypeError } from '@/functions';
-import { StateMealStore } from '@/store/meals/types';
-import { useMealStore } from '@/store/meals';
-import { api } from '@/services/api';
+import { useUtilsStore } from '@/store/utils';
+import { useSearchStore } from '@/store/search';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
-
-type useMealsType = {
-  (category?: string | undefined): Partial<StateMealStore>;
-};
+import { IMeal } from '@/types';
+import { fetchService } from '@/services/fetch';
 
 type FetchType = {
   (url: string, controller?: AbortController): Promise<void>;
 };
 
-const useMeals: useMealsType = (category) => {
-  const {
-    state: { meals, isLoading, noMeals, searchMeal },
-    actions: { initialState, setLoading, fail, success }
-  } = useMealStore();
-
+const useMeals = (category: string | undefined) => {
+  const [meals, setMeals] = useState<IMeal[]>([]);
   const { showBoundary } = useErrorBoundary();
+
+  const {
+    state: { isLoading, notFound },
+    actions: { initialState, setLoading, setNotFound }
+  } = useUtilsStore();
+
+  const {
+    state: { searchMeal },
+    actions: { clearSearch }
+  } = useSearchStore();
 
   useEffect(() => {
     const controller = new AbortController();
 
-    const fetch: FetchType = async (url, controller) => {
+    const resetMeals = () => {
+      setMeals([]);
       initialState();
-      setLoading();
-      try {
-        const response = await api.get(url, {
-          signal: controller?.signal
-        });
-        const mealsData = response.data.meals;
+      clearSearch();
+    };
 
-        if (!mealsData) return fail();
-        return success(mealsData);
-      } catch (error) {
-        if (isTypeError(error)) return;
-        showBoundary(error);
-      }
+    const fetch: FetchType = async (url, controller) => {
+      fetchService(
+        url,
+        'meals',
+        setLoading,
+        setMeals,
+        showBoundary,
+        controller,
+        setNotFound,
+        resetMeals
+      );
     };
 
     if (category) fetch(`/filter.php?c=${category}`, controller);
@@ -52,13 +56,14 @@ const useMeals: useMealsType = (category) => {
     searchMeal,
     category,
     initialState,
+    clearSearch,
     setLoading,
-    fail,
-    success,
+    setNotFound,
+    setMeals,
     showBoundary
   ]);
 
-  return { meals, isLoading, noMeals };
+  return { meals, isLoading, notFound };
 };
 
 export { useMeals };

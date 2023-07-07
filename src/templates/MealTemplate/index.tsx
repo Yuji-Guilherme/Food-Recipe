@@ -11,7 +11,7 @@ type MealTemplateProps = {
 
 function MealTemplate({ mealId }: MealTemplateProps) {
   const {
-    noMeal,
+    notFound,
     isLoading,
     strInstructions,
     strMeal,
@@ -26,7 +26,7 @@ function MealTemplate({ mealId }: MealTemplateProps) {
   return (
     <>
       <S.Section>
-        {noMeal && <S.ErrorMessage>No recipe</S.ErrorMessage>}
+        {notFound && <S.ErrorMessage>No recipe</S.ErrorMessage>}
         <S.TextWrapper>
           {isLoading && (
             <Skeleton
@@ -49,7 +49,7 @@ function MealTemplate({ mealId }: MealTemplateProps) {
             )}
           </S.TagWrapper>
         </S.TextWrapper>
-        {!noMeal && (
+        {!notFound && (
           <S.ImageWrapper>
             {isLoading && (
               <Skeleton
@@ -104,7 +104,7 @@ function MealTemplate({ mealId }: MealTemplateProps) {
               />
             </>
           )}
-          {!isLoading && !noMeal && (
+          {!isLoading && !notFound && (
             <>
               <S.SecondaryTitle>Instructions</S.SecondaryTitle>
               <S.Instruction>{strInstructions}</S.Instruction>

@@ -1,65 +1,43 @@
 import { IMeal } from '@/types';
-import { StateProps, ActionProps } from './types';
-import { api } from '@/services/api';
-import { isTypeError } from '@/functions';
+import { useUtilsStore } from '@/store/utils';
+import { fetchService } from '@/services/fetch';
 
-import { useReducer, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
 
 const useMealTemplate = (id: string) => {
-  const initialState: StateProps<IMeal> = {
-    data: undefined,
-    noMeal: false,
-    isLoading: true
-  };
-
-  const reducer = (state: StateProps<IMeal>, action: ActionProps<IMeal>) => {
-    switch (action.type) {
-      case 'loading':
-        return { ...initialState, isLoading: true };
-      case 'fetch':
-        return { ...initialState, isLoading: false, data: action.payload };
-      case 'error':
-        return { ...initialState, isLoading: false, noMeal: true };
-      default:
-        return state;
-    }
-  };
-
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [meal, setMeal] = useState<IMeal>();
   const { showBoundary } = useErrorBoundary();
+
+  const {
+    state: { isLoading, notFound },
+    actions: { setLoading, setNotFound }
+  } = useUtilsStore();
 
   useEffect(() => {
     const controller = new AbortController();
+    const setMealOperation = (data: IMeal[]) => setMeal({ ...data[0] });
 
-    const fetch = async () => {
-      dispatch({ type: 'loading' });
-
-      try {
-        const response = await api.get(`/lookup.php?i=${id}`, {
-          signal: controller.signal
-        });
-        if (!response.data.meals) return dispatch({ type: 'error' });
-        const meal: IMeal = { ...response.data.meals[0] };
-        dispatch({ type: 'fetch', payload: meal });
-      } catch (error) {
-        if (isTypeError(error)) return;
-        showBoundary(error);
-      }
-    };
-
-    fetch();
+    fetchService(
+      `/lookup.php?i=${id}`,
+      'meals',
+      setLoading,
+      setMealOperation,
+      showBoundary,
+      controller,
+      setNotFound
+    );
 
     return () => {
       controller.abort();
     };
-  }, [id, showBoundary]);
+  }, [id, setLoading, setMeal, setNotFound, showBoundary]);
 
   return {
-    noMeal: state.noMeal,
-    mealInfo: state.data,
-    isLoading: state.isLoading,
-    ...state.data
+    isLoading,
+    notFound,
+    mealInfo: meal,
+    ...meal
   };
 };
 

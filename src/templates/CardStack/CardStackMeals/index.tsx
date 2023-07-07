@@ -8,11 +8,11 @@ type CardStackMealsProps = {
 };
 
 function CardStackMeals({ category }: CardStackMealsProps) {
-  const { meals, isLoading, noMeals } = useMeals(category);
+  const { meals, isLoading, notFound } = useMeals(category);
 
   return (
     <S.SectionMeals>
-      {noMeals && <S.ErrorMessage>There are no recipes</S.ErrorMessage>}
+      {notFound && <S.ErrorMessage>There are no recipes</S.ErrorMessage>}
       <S.TitleWrapper>
         {isLoading && (
           <Skeleton

@@ -1,4 +1,4 @@
-import { useMealStore } from '@/store/meals';
+import { useSearchStore } from '@/store/search';
 
 import { useEffect, useRef, useState } from 'react';
 
@@ -7,10 +7,10 @@ const useInput = () => {
   const [removeBtnIsOn, setRemoveBtnIsOn] = useState(false);
   const [upInput, setUpInput] = useState(false);
   const {
-    actions: { initialState, setSearchMeal }
-  } = useMealStore();
+    actions: { clearSearch, setSearchMeal }
+  } = useSearchStore();
 
-  useEffect(() => initialState(), [initialState]);
+  useEffect(() => clearSearch(), [clearSearch]);
 
   const inputFocus = () => {
     inputRef?.current?.focus();
