@@ -5,4 +5,6 @@ const pipe =
   (initialValue) =>
     fns.reduce((previousValue, fn) => fn(previousValue), initialValue);
 
-export { partialize, pipe };
+const takeUntil = (times, fn) => () => times-- && fn();
+
+export { partialize, pipe, takeUntil };

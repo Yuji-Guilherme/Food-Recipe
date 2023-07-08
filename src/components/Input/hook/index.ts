@@ -1,3 +1,4 @@
+import { takeUntil } from '@/functions/utils';
 import { useSearchStore } from '@/store/search';
 
 import { useEffect, useRef, useState } from 'react';
@@ -44,7 +45,7 @@ const useInput = () => {
     const searchMeal = inputRef.current!.value;
     if (!searchMeal) return;
 
-    if (!upInput) setUpInput(true);
+    takeUntil(1, setUpInput(true));
     setSearchMeal(searchMeal);
     inputBlur();
   };
