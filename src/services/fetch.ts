@@ -2,18 +2,18 @@ import { isTypeError } from '@/functions';
 
 import { api } from '@/services/api';
 
-type FetchServiceProps<Data> = [
+type FetchServiceProps<TData> = [
   url: string,
   dataType: 'meals' | 'categories',
   setLoad: (boolean: boolean | undefined) => void,
-  setData: (data: Data[]) => void,
+  setData: (data: TData[]) => void,
   errorBoundary: (error: unknown) => void,
   controller?: AbortController,
   setError?: () => void,
   fnReset?: () => void
 ];
 
-async function fetchService<Data>(
+async function fetchService<TData>(
   ...[
     url,
     dataType,
@@ -23,7 +23,7 @@ async function fetchService<Data>(
     controller,
     setError,
     fnReset
-  ]: FetchServiceProps<Data>
+  ]: FetchServiceProps<TData>
 ) {
   const dataTypes = {
     meals: 'meals',

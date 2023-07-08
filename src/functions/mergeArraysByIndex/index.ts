@@ -1,10 +1,11 @@
-import { IIngredients } from '@/types';
+import { Ingredient } from '@/types';
 
-type MergeArrayProps<T> = {
-  (FirstArray: Partial<T>[], SecondArray: Partial<T>[]): T[];
-};
+type MergeArray<T> = (
+  FirstArray: Partial<T>[],
+  SecondArray: Partial<T>[]
+) => T[];
 
-const mergeArray: MergeArrayProps<IIngredients> = (FirstArray, SecondArray) => {
+const mergeArray: MergeArray<Ingredient> = (FirstArray, SecondArray) => {
   return FirstArray.map((item, index) => ({
     ...item,
     ...SecondArray[index]

@@ -1,9 +1,7 @@
-import { IMeal } from '@/types';
+import { Meal } from '@/types';
 
-type dataToArrayProps<Data> = {
-  (data: Data): [string, string][];
-};
+type DataToArray<TData> = (data: TData) => [string, string][];
 
-const dataToArray: dataToArrayProps<IMeal> = (data) => Object.entries(data);
+const dataToArray: DataToArray<Meal> = (data) => Object.entries(data);
 
 export { dataToArray };

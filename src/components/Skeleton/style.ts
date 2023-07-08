@@ -1,4 +1,4 @@
-import { SkeletonProps } from '.';
+import { SkeletonProps } from './types';
 
 import styled, { css, keyframes } from 'styled-components';
 

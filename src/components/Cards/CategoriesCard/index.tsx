@@ -1,4 +1,4 @@
-import { ICategories } from '@/types';
+import { Categories } from '@/types';
 import { useCategoriesCard } from './hook';
 
 import * as S from './style';
@@ -6,7 +6,7 @@ import * as S from './style';
 function CategoriesCard({
   strCategory,
   strCategoryThumb
-}: Partial<ICategories>) {
+}: Partial<Categories>) {
   const { handleClick } = useCategoriesCard();
 
   return (

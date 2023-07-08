@@ -1,4 +1,4 @@
-import { ICategories } from '@/types';
+import { Categories } from '@/types';
 
 import { useEffect, useState } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
@@ -6,7 +6,7 @@ import { useUtilsStore } from '@/store/utils';
 import { fetchService } from '@/services/fetch';
 
 const useCategories = () => {
-  const [categories, setCategories] = useState<ICategories[]>([]);
+  const [categories, setCategories] = useState<Categories[]>([]);
   const { showBoundary } = useErrorBoundary();
   const {
     state: { isLoading },
@@ -15,9 +15,10 @@ const useCategories = () => {
 
   useEffect(() => {
     const controller = new AbortController();
+    const url = 'categories.php';
 
     fetchService(
-      'categories.php',
+      url,
       'categories',
       setLoading,
       setCategories,

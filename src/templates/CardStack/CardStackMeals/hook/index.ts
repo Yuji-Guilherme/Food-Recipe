@@ -3,15 +3,13 @@ import { useSearchStore } from '@/store/search';
 
 import { useEffect, useState } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
-import { IMeal } from '@/types';
+import { Meal } from '@/types';
 import { fetchService } from '@/services/fetch';
 
-type FetchType = {
-  (url: string, controller?: AbortController): Promise<void>;
-};
+type Fetch = (url: string, controller?: AbortController) => Promise<void>;
 
 const useMeals = (category: string | undefined) => {
-  const [meals, setMeals] = useState<IMeal[]>([]);
+  const [meals, setMeals] = useState<Meal[]>([]);
   const { showBoundary } = useErrorBoundary();
 
   const {
@@ -33,7 +31,7 @@ const useMeals = (category: string | undefined) => {
       clearSearch();
     };
 
-    const fetch: FetchType = async (url, controller) => {
+    const fetch: Fetch = async (url, controller) => {
       fetchService(
         url,
         'meals',

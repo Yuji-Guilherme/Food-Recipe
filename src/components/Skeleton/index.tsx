@@ -1,17 +1,6 @@
 import * as S from './style';
 
-export type SkeletonProps = {
-  spacing?: number;
-  width?: number;
-  height?: number;
-  height2?: number;
-  border?: number;
-  border2?: number;
-  lines?: number;
-  marginB?: number;
-  smallHeight?: number;
-  smWidthPercent?: number;
-};
+import { SkeletonProps } from './types';
 
 function Skeleton({
   spacing = 20,
@@ -40,7 +29,15 @@ function Skeleton({
           border={border}
         />
       ))}
-      {height2 ? <S.SkeletonContent height={height2} border={border2} /> : ''}
+      {height2 ? (
+        <S.SkeletonContent
+          height={height2}
+          border={border2}
+          smallHeight={smallHeight}
+        />
+      ) : (
+        ''
+      )}
     </S.SkeletonContainer>
   );
 }

@@ -1,5 +1,5 @@
-import { ICategories } from './ICategories';
-import { IIngredients } from './IIngredients';
-import { IMeal } from './IMeal';
+import { Categories } from './Categories';
+import { Ingredient } from './Ingredient';
+import { Meal } from './Meal';
 
-export type { ICategories, IIngredients, IMeal };
+export type { Categories, Ingredient, Meal };

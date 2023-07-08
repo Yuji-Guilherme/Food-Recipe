@@ -1,10 +1,10 @@
-import { IMeal } from '@/types';
+import { Meal } from '@/types';
 import { useIngredients } from './hook';
 
 import * as S from './style';
 
 type IngredientsProps = {
-  meal: IMeal;
+  meal: Meal;
 };
 
 function Ingredients({ meal }: IngredientsProps) {

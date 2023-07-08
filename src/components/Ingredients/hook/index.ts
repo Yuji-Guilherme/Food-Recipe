@@ -1,10 +1,10 @@
-import { IMeal, IIngredients } from '@/types';
+import { Meal, Ingredient } from '@/types';
 import { filterObjByName, mergeArray } from '@/functions';
 
 import { useEffect, useState } from 'react';
 
-const useIngredients = (meal: IMeal) => {
-  const [ingredients, setIngredients] = useState<IIngredients[]>([]);
+const useIngredients = (meal: Meal) => {
+  const [ingredients, setIngredients] = useState<Ingredient[]>([]);
 
   useEffect(() => {
     const onlyIngredientsArray = filterObjByName(meal, 'strIngredient');

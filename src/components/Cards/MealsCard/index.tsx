@@ -1,4 +1,4 @@
-import { IMeal } from '@/types';
+import { Meal } from '@/types';
 import { useMealsCard } from './hook';
 import { useTags } from '@/hooks/useTags';
 
@@ -10,7 +10,7 @@ function MealsCard({
   strMeal,
   strMealThumb,
   idMeal
-}: Partial<IMeal>) {
+}: Partial<Meal>) {
   const { handleClick } = useMealsCard();
 
   const { handleNavigate } = useTags();
