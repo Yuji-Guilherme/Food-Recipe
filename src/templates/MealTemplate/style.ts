@@ -144,7 +144,8 @@ const ErrorMessage = styled.h3`
   font-size: 1.8rem;
   font-weight: 500;
   color: var(--light-black);
-  margin: 40px auto 0;
+  grid-area: 1/1/4/3;
+  margin: 80px auto 0;
 `;
 
 export {
