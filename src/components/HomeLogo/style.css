@@ -1,7 +1,28 @@
 .svg {
-  height: 300px;
-  width: 175px;
+    width: 175px;
+    height: 300px;
 }
+
+@media (max-device-width: 1024px) {
+    .svg {
+        width: 150px;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-device-width: 450px) {
+    .svg {
+        width: 130px;
+        height: 210px;
+    }
+  }
+
+@media only screen and (max-device-width: 375px) {
+    .svg {
+        width: 105px;
+        height: 170px;
+    }
+  }
 
 .svg:hover .hat, .svg:hover .circle-center, .svg:hover .circle-l, .svg:hover .circle-r {
     transition: .4s;
@@ -19,7 +40,7 @@
 .hat {
     transform: translateY(-10px) rotate(360deg);
     animation: animation-hat 1s 3;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 
 @keyframes animation-circle-l {
@@ -28,7 +49,7 @@
 
 .circle-l {
     animation: animation-circle-l 1s 3;
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
 
 @keyframes animation-circle-r {
@@ -37,7 +58,7 @@
 
 .circle-r {
     animation: animation-circle-r 1s 3;
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
 
 @keyframes animation-circle-center {
@@ -46,5 +67,5 @@
 
 .circle-center {
     animation: animation-circle-center 0.8s 3;
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
