@@ -25,13 +25,13 @@ const TextCard = styled.div`
 
 const Title = styled.h3`
   font-weight: 500;
-  color: var(--light-black);
+  color: #0a1030;
   overflow-wrap: break-word;
 `;
 
 const Text = styled.p`
   font-size: 1.4rem;
-  color: var(--dark-grey);
+  color: #586084;
 
   @media only screen and (max-device-width: 450px) {
     font-size: 1.6rem;

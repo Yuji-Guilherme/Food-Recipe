@@ -5,6 +5,7 @@ import * as S from './style';
 function NavBar() {
   return (
     <S.NavBar>
+      <NavLink to="/search">Search</NavLink>
       <NavLink to="/">Home</NavLink>
       <NavLink to="/categories">Categories</NavLink>
     </S.NavBar>

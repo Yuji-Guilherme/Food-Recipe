@@ -1,4 +1,5 @@
 import { CategoriesCard } from '@/components/Cards';
+import { MiniLogo } from '@/components/MiniLogo';
 import { Skeleton } from '@/components/Skeleton';
 import { useCategories } from './hook';
 
@@ -9,7 +10,10 @@ function CardStackCategories() {
 
   return (
     <S.SectionCategories>
-      <S.TitleCategories>Categories</S.TitleCategories>
+      <S.TitleCategoriesWrapper>
+        <MiniLogo width={24} height={22} />
+        <S.TitleCategories>Categories</S.TitleCategories>
+      </S.TitleCategoriesWrapper>
       <S.CardStackCategories>
         {isLoading &&
           [...Array(14)].map((_, index) => (

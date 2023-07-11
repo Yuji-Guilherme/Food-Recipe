@@ -13,17 +13,28 @@ const SectionCategories = styled(Section)`
   }
 `;
 
-const TitleCategories = styled(Title)`
+const TitleCategoriesWrapper = styled.div`
+  display: flex;
+  align-items: center;
   margin: 24px 0px 32px 24px;
+  gap: 8px;
 
   @media only screen and (max-device-width: 1024px) {
-    font-size: 2.8rem;
     margin: 0 0 32px 32px;
   }
 
   @media only screen and (max-device-width: 450px) {
-    font-size: 2rem;
     margin: 24px 0;
+  }
+`;
+
+const TitleCategories = styled(Title)`
+  @media only screen and (max-device-width: 1024px) {
+    font-size: 2.8rem;
+  }
+
+  @media only screen and (max-device-width: 450px) {
+    font-size: 2rem;
   }
 `;
 
@@ -43,6 +54,7 @@ const CardStackCategories = styled(CardStack)`
 
 export {
   SectionCategories,
+  TitleCategoriesWrapper,
   TitleCategories,
   CardStackCategories,
   ErrorMessage

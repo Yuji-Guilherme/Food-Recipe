@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { ErrorMessage } from '@/templates/CardStack/style';
+
 const Section = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -39,7 +41,7 @@ const TextWrapper = styled.div`
 const Title = styled.h1`
   font-size: 3.2rem;
   font-weight: 600;
-  color: var(--light-black);
+  color: #0a1030;
 
   @media only screen and (max-device-width: 1024px) {
     font-size: 2.8rem;
@@ -58,7 +60,7 @@ const TagWrapper = styled.div`
 const Tag = styled.p`
   font-size: 1.6rem;
   font-weight: 500;
-  color: var(--dark-grey);
+  color: #686d88d6;
 `;
 
 const TagCategory = styled(Tag)`
@@ -66,7 +68,7 @@ const TagCategory = styled(Tag)`
   position: relative;
 
   &:hover {
-    color: var(--light-black);
+    color: #090e2a;
     transition: 0.5s;
     cursor: pointer;
   }
@@ -108,7 +110,7 @@ const SecondaryTitle = styled.h2`
   width: 100%;
   font-size: 2.6rem;
   font-weight: 600;
-  color: var(--light-black);
+  color: #282d46;
 
   @media only screen and (max-device-width: 450px) {
     font-size: 2.2rem;
@@ -132,18 +134,14 @@ const InstructionSection = styled.section`
 
 const Instruction = styled.p`
   font-size: 1.6rem;
-  color: var(--light-black);
+  color: #2c3648;
 
   @media only screen and (max-device-width: 450px) {
     padding: 0 16px;
   }
 `;
 
-const ErrorMessage = styled.h3`
-  width: fit-content;
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: var(--light-black);
+const ErrorMessageMealTemplate = styled(ErrorMessage)`
   grid-area: 1/1/4/3;
   margin: 80px auto 0;
 `;
@@ -160,5 +158,5 @@ export {
   TagCategory,
   InstructionSection,
   Instruction,
-  ErrorMessage
+  ErrorMessageMealTemplate
 };

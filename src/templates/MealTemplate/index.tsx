@@ -26,7 +26,9 @@ function MealTemplate({ mealId }: MealTemplateProps) {
   return (
     <>
       <S.Section>
-        {notFound && <S.ErrorMessage>No recipe</S.ErrorMessage>}
+        {notFound && (
+          <S.ErrorMessageMealTemplate>No recipe</S.ErrorMessageMealTemplate>
+        )}
         <S.TextWrapper>
           {isLoading && (
             <Skeleton

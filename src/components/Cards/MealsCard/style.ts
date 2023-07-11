@@ -91,7 +91,7 @@ const TextCategory = styled(Text)`
 
   &:hover {
     cursor: pointer;
-    color: var(--light-black);
+    color: #090e2a;
     transition: 0.5s;
   }
 `;

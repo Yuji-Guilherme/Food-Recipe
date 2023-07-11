@@ -27,36 +27,19 @@ const Section = styled.section<SectionProps>`
   }
 `;
 
-const Title = styled.h1`
-  font-size: 3.8rem;
-  font-weight: 600;
-  color: var(--light-black);
-
-  @media only screen and (max-device-width: 1024px) {
-    font-size: 3rem;
-  }
-
-  @media only screen and (max-device-width: 450px) {
-    font-size: 2.5rem;
-    margin-left: 20px;
-  }
-`;
-
-const Container = styled.div`
-  height: 50px;
+const InputContainer = styled.div`
+  height: 56px;
   width: 50%;
   min-width: 350px;
   max-width: 600px;
-  background-color: var(--input-color);
-  border: 1px solid transparent;
-  border-radius: 24px;
-  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  background-color: transparent;
+  border: 3px solid #090e2a;
+  border-radius: 16px 16px 7px;
   display: flex;
   align-items: center;
   padding: 0 20px;
 
   &:hover {
-    box-shadow: 0 2px 5px 2px rgb(64 60 67 / 18%);
     cursor: pointer;
   }
 
@@ -66,10 +49,8 @@ const Container = styled.div`
 
   @media only screen and (max-device-width: 450px) {
     width: 90%;
-    background-color: transparent;
     padding: 0px 10px;
     margin: 0px auto;
-    box-shadow: none;
     border-radius: 0;
     border-bottom: 2px solid #beb3b38f;
 
@@ -87,19 +68,16 @@ const Input = styled.input`
   width: 100%;
   font-size: 1.4rem;
   background-color: transparent;
+  color: #040614;
   border: none;
 
   &::placeholder {
-    color: var(--light-grey);
+    color: #b3b19f;
   }
 
   &:focus {
     outline: none;
-
-    ~ button:last-of-type > svg {
-      color: var(--light-black);
-    }
   }
 `;
 
-export { Section, Title, Container, Input };
+export { Section, InputContainer, Input };

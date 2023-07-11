@@ -1,4 +1,5 @@
 import { Button } from './Button';
+import { Title } from './Title';
 import { useInput } from './hook';
 
 import * as S from './style';
@@ -16,8 +17,8 @@ function Input() {
 
   return (
     <S.Section up={upInput}>
-      <S.Title>Make your own food!</S.Title>
-      <S.Container
+      <Title />
+      <S.InputContainer
         onClick={() => handleInputFocus()}
         onBlur={() => verifyInput()}
       >
@@ -34,7 +35,7 @@ function Input() {
           <Button buttonType="remove" onClick={() => handleRemove()} />
         )}
         <Button buttonType="search" onClick={() => handleSearch()} />
-      </S.Container>
+      </S.InputContainer>
     </S.Section>
   );
 }

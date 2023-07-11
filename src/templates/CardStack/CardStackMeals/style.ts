@@ -8,7 +8,7 @@ import {
 } from '@/templates/CardStack/style';
 
 const SectionMeals = styled(Section)`
-  @media only screen and (max-device-width: 1024px) {
+  @media only screen and (max-device-width: 1400px) {
     margin: 24px 10px 80px;
   }
 `;
@@ -30,7 +30,7 @@ const CardStackMeals = styled(CardStack)`
   grid-template-columns: repeat(4, 1fr);
   row-gap: 40px;
 
-  @media only screen and (max-device-width: 1024px) {
+  @media only screen and (max-device-width: 1220px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
