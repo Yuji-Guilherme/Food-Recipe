@@ -7,35 +7,37 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 20vh;
-  gap: 20px;
+  gap: 22px;
 `;
 
 const Title = styled.h1`
   max-width: 90%;
   font-size: 3rem;
   font-weight: 500;
-  color: var(--light-black);
+  color: #090e2a;
   text-align: center;
 `;
 
 const Description = styled.p`
   max-width: 90%;
   font-size: 1.8rem;
-  color: var(--light-black);
+  color: #0a1030;
   text-align: center;
 `;
 
 const Button = styled.button`
+  width: 118px;
+  height: 50px;
   font-size: 1.6rem;
-  color: var(--light-black);
+  font-weight: 500;
+  color: #0a1030;
   background-color: transparent;
-  padding: 8px;
-  border: 2px solid var(--light-black);
-  border-radius: 8px;
+  border: 3px solid #0a1030;
+  border-radius: 14px 14px 14px 7px;
 
   &:hover {
-    color: white;
-    background-color: var(--light-black);
+    color: #fffdeb;
+    background-color: #0a1030;
     transition: 0.3s;
   }
 `;
