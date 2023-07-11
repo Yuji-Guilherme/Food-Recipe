@@ -1,13 +1,11 @@
-import { Input } from '@/components/Input';
-import { CardStackMeals } from '@/templates/CardStack';
+import { HomeTemplate } from '@/templates/HomeTemplate';
 
 import * as S from './style';
 
 function Home() {
   return (
     <S.Main>
-      <Input />
-      <CardStackMeals />
+      <HomeTemplate />
     </S.Main>
   );
 }

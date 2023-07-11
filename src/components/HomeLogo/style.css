@@ -1,0 +1,50 @@
+.svg {
+  height: 300px;
+  width: 175px;
+}
+
+.svg:hover .hat, .svg:hover .circle-center, .svg:hover .circle-l, .svg:hover .circle-r {
+    transition: .4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation-hat {
+    0% { transform: translate(0, -10px) rotate(360deg); }
+    50% { transform: translate(-19px, -3px) rotate(357deg); }
+    70% { transform: translate(-14px, 0) rotate(358deg); }
+    85% { transform: translate(-8px, -5px) rotate(359deg); }
+    100% { transform: translate(0, -10px) rotate(360deg); }
+}
+
+.hat {
+    transform: translateY(-10px) rotate(360deg);
+    animation: animation-hat 1s 3;
+    animation-delay: 2s;
+}
+
+@keyframes animation-circle-l {
+    to { transform: translateY(110px);}
+}
+
+.circle-l {
+    animation: animation-circle-l 1s 3;
+    animation-delay: 3s;
+}
+
+@keyframes animation-circle-r {
+    to { transform: translateY(120px);}
+}
+
+.circle-r {
+    animation: animation-circle-r 1s 3;
+    animation-delay: 3s;
+}
+
+@keyframes animation-circle-center {
+    to { transform: translateY(70px);}
+}
+
+.circle-center {
+    animation: animation-circle-center 0.8s 3;
+    animation-delay: 3s;
+}

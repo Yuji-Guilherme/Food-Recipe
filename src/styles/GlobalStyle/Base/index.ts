@@ -8,9 +8,10 @@ const Base = createGlobalStyle`
     body {
         width: 100%;
         font-family: 'Poppins', sans-serif;
+        background-color: var(--body-color);
     }
 
-    button {
+    button, a {
         cursor: pointer;
     }
 `;
