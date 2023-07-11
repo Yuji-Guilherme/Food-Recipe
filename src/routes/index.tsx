@@ -15,11 +15,11 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       {
-        path: '/',
-        element: <Navigate to={''} />
+        path: '/home',
+        element: <Navigate to={'/'} />
       },
       {
-        path: '/home',
+        path: '/',
         element: <Navigate to={''} />
       }
     ]
@@ -30,8 +30,8 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       {
-        path: 'home',
-        element: <Navigate to={''} />
+        path: 'home/',
+        element: <Navigate to={'/'} />
       },
       {
         path: 'search',
