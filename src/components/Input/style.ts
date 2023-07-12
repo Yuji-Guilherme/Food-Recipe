@@ -49,18 +49,10 @@ const InputContainer = styled.div`
 
   @media only screen and (max-device-width: 450px) {
     width: 90%;
-    padding: 0px 10px;
-    margin: 0px auto;
-    border-radius: 0;
-    border-bottom: 2px solid #beb3b38f;
-
-    &:hover {
-      box-shadow: none;
-    }
-
-    &:focus-within {
-      border-bottom: 1px solid var(--light-black);
-    }
+    height: 50px;
+    padding: 0px 12px;
+    margin: 8px auto 0;
+    border-radius: 14px 14px 7px;
   }
 `;
 

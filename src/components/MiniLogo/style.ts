@@ -12,6 +12,11 @@ const MiniLogo = styled.div<LogoProps>`
     background-color: #090e2a;
     mask-image: url(${svg});
     mask-size: cover;
+
+    @media only screen and (max-device-width: 450px) {
+      width: 26px;
+      height: 24px;
+    }
   `}
 `;
 

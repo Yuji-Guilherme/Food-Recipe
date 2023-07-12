@@ -71,8 +71,16 @@ const BtnR = styled.a`
     border-radius: 20px 20px 8px;
     border-width: 5px;
 
-    &::before {
-      border-radius: 12px 12px 2px;
+    &:hover {
+      color: #090e2a;
+
+      ::before {
+        width: 0%;
+      }
+
+      > div {
+        background-color: #090e2a;
+      }
     }
   }
 `;

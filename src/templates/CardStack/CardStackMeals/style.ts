@@ -34,6 +34,10 @@ const CardStackMeals = styled(CardStack)`
     grid-template-columns: repeat(3, 1fr);
   }
 
+  @media only screen and (max-device-width: 840px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   @media only screen and (max-device-width: 450px) {
     width: 85%;
     display: flex;

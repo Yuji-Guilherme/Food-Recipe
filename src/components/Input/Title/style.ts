@@ -4,6 +4,11 @@ const TitleWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
+
+  @media only screen and (max-device-width: 450px) {
+    margin-left: 12px;
+    gap: 6px;
+  }
 `;
 
 const Title = styled.h1`
@@ -17,7 +22,6 @@ const Title = styled.h1`
 
   @media only screen and (max-device-width: 450px) {
     font-size: 2.5rem;
-    margin-left: 20px;
   }
 `;
 

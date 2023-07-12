@@ -29,7 +29,18 @@ const NavBar = styled.nav`
   }
 
   @media only screen and (max-device-width: 450px) {
-    box-shadow: #090e2a 0px 1px 0px inset;
+    height: 56px;
+    box-shadow: #586084 0px 1px 0px inset;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    gap: 2px;
+    justify-content: space-around;
+
+    & > a {
+      width: fit-content;
+    }
   }
 `;
 

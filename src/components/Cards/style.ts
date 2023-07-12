@@ -35,7 +35,7 @@ const Text = styled.p`
 
   @media only screen and (max-device-width: 450px) {
     font-size: 1.6rem;
-    color: white;
+    color: #fffdeb;
   }
 `;
 

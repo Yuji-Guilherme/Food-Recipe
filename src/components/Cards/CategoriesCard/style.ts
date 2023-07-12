@@ -26,6 +26,7 @@ const ImageCardCategories = styled(ImageCard)`
 
   @media only screen and (max-device-width: 450px) {
     height: 82px;
+    border-radius: 18px;
   }
 `;
 

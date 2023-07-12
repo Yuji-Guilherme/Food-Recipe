@@ -17,7 +17,7 @@ const CardMeals = styled(Card)`
 
   @media only screen and (max-device-width: 450px) {
     width: 100%;
-    border-radius: 30px;
+    border-radius: 34px;
     background: linear-gradient(
       180deg,
       rgb(0 0 0 / 0%) 50%,
@@ -36,7 +36,7 @@ const ImageWrapper = styled.div`
 
   @media only screen and (max-device-width: 450px) {
     height: 512px;
-    border-radius: 40px;
+    border-radius: 34px;
     position: relative;
   }
 `;
@@ -48,6 +48,7 @@ const ImageCardMeals = styled(ImageCard)`
 
   @media only screen and (max-device-width: 450px) {
     position: relative;
+    border-radius: 34px;
     z-index: -1;
   }
 `;
@@ -70,7 +71,7 @@ const TitleMeals = styled(Title)`
 
   @media only screen and (max-device-width: 450px) {
     max-width: 270px;
-    color: white;
+    color: #fffdeb;
   }
 `;
 
@@ -80,9 +81,9 @@ const TextWrapper = styled.div`
 
   @media only screen and (max-device-width: 450px) {
     width: fit-content;
-    background-color: #ffffff29;
+    background-color: #fffdeb21;
     padding: 4px 12px;
-    border-radius: 12px;
+    border-radius: 10px 10px 3px;
   }
 `;
 

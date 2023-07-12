@@ -11,6 +11,10 @@ const SectionCategories = styled(Section)`
   @media only screen and (max-device-width: 1024px) {
     margin: 24px 28px 80px;
   }
+
+  @media only screen and (max-device-width: 450px) {
+    margin: 24px 24px 80px;
+  }
 `;
 
 const TitleCategoriesWrapper = styled.div`
