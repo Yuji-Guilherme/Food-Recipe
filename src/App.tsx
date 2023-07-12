@@ -1,8 +1,8 @@
 import GlobalStyle from './styles/GlobalStyle';
+import { PageWrapper } from './components/PageWrapper';
 import { router } from './routes';
 
 import { RouterProvider } from 'react-router-dom';
-import { PageWrapper } from './components/PageWrapper';
 
 function App() {
   return (
