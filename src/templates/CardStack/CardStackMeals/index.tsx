@@ -1,7 +1,8 @@
-import * as S from './style';
-import { MealsCard } from '@/components/Cards';
 import { Skeleton } from '@/components/Skeleton';
+import { MealsCard } from '@/components/Cards';
 import { useMeals } from './hook';
+
+import * as S from './style';
 
 type CardStackMealsProps = {
   category?: string;

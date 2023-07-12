@@ -1,6 +1,6 @@
-import { CategoriesCard } from '@/components/Cards';
 import { MiniLogo } from '@/components/MiniLogo';
 import { Skeleton } from '@/components/Skeleton';
+import { CategoriesCard } from '@/components/Cards';
 import { useCategories } from './hook';
 
 import * as S from './style';

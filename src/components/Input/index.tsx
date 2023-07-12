@@ -1,5 +1,5 @@
-import { Button } from './Button';
 import Title from './Title';
+import { Button } from './Button';
 import { useInput } from './hook';
 
 import * as S from './style';

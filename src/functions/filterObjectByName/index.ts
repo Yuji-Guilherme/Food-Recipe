@@ -1,8 +1,8 @@
 import { Meal } from '@/types';
 import { partialize, pipe } from '@/functions';
-import { dataToArray } from './dataToArray';
-import { arrayToObjectKeyArray } from './arrayToObjectKeyArray';
 import { filterArrayByInitialName } from './filterArrayByInitialName';
+import { arrayToObjectKeyArray } from './arrayToObjectKeyArray';
+import { dataToArray } from './dataToArray';
 
 type FilterObjByName<TData> = (
   data: TData,

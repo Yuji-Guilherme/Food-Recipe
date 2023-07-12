@@ -1,6 +1,6 @@
-import * as S from './style';
-
 import { SkeletonProps } from './types';
+
+import * as S from './style';
 
 function Skeleton({
   spacing = 20,

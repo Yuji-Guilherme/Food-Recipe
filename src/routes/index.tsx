@@ -1,6 +1,6 @@
-import { Header } from '@/templates/Header';
-import { NotFound } from '@/pages/NotFound';
 import { Home } from '@/pages/Home';
+import { NotFound } from '@/pages/NotFound';
+import { Header } from '@/templates/Header';
 import { Search } from '@/pages/Search';
 import { Categories } from '@/pages/Categories';
 import { MealsByCategory } from '@/pages/MealsByCategory';

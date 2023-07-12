@@ -1,6 +1,5 @@
-import { isTypeError } from '@/functions';
-
 import { api } from '@/services/api';
+import { isTypeError } from '@/functions';
 
 type FetchServiceProps<TData> = [
   url: string,

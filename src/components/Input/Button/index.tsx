@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes } from 'react';
-import { IoMdClose } from 'react-icons/io';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { IoMdClose } from 'react-icons/io';
 
 import * as S from './style';
 

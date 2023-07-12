@@ -1,10 +1,10 @@
+import { Meal } from '@/types';
 import { useUtilsStore } from '@/store/utils';
 import { useSearchStore } from '@/store/search';
+import { fetchService } from '@/services/fetch';
 
 import { useEffect, useState } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
-import { Meal } from '@/types';
-import { fetchService } from '@/services/fetch';
 
 type Fetch = (url: string, controller?: AbortController) => Promise<void>;
 

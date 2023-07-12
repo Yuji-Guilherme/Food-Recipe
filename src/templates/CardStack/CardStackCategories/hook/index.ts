@@ -1,9 +1,9 @@
 import { Categories } from '@/types';
+import { useUtilsStore } from '@/store/utils';
+import { fetchService } from '@/services/fetch';
 
 import { useEffect, useState } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
-import { useUtilsStore } from '@/store/utils';
-import { fetchService } from '@/services/fetch';
 
 const useCategories = () => {
   const [categories, setCategories] = useState<Categories[]>([]);

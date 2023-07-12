@@ -1,4 +1,5 @@
 import { MiniLogo } from '@/components/MiniLogo';
+
 import { memo } from 'react';
 
 import * as S from './style';
