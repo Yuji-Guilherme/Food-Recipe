@@ -21,7 +21,7 @@ function MealTemplate({ mealId }: MealTemplateProps) {
     mealInfo
   } = useMealTemplate(mealId);
 
-  const { handleNavigate } = useTags();
+  const { handleNavigateTags } = useTags();
 
   return (
     <>
@@ -44,7 +44,7 @@ function MealTemplate({ mealId }: MealTemplateProps) {
             {strArea && strCategory && (
               <>
                 <S.Tag>{strArea} /</S.Tag>
-                <S.TagCategory onClick={() => handleNavigate(strCategory!)}>
+                <S.TagCategory onClick={() => handleNavigateTags(strCategory!)}>
                   {strCategory}
                 </S.TagCategory>
               </>

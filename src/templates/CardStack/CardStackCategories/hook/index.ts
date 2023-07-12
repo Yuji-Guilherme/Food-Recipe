@@ -8,6 +8,7 @@ import { fetchService } from '@/services/fetch';
 const useCategories = () => {
   const [categories, setCategories] = useState<Categories[]>([]);
   const { showBoundary } = useErrorBoundary();
+
   const {
     state: { isLoading },
     actions: { setLoading }

@@ -1,5 +1,5 @@
 import { Categories } from '@/types';
-import { useCategoriesCard } from './hook';
+import { useHandleNavigate } from '@/hooks/useHandleNavigate';
 
 import * as S from './style';
 
@@ -7,15 +7,16 @@ function CategoriesCard({
   strCategory,
   strCategoryThumb
 }: Partial<Categories>) {
-  const { handleClick } = useCategoriesCard();
+  const { handleNavigate } = useHandleNavigate();
+  const url = `/category/${strCategory}`;
 
   return (
     <S.CardCategories>
       <S.ImageCardCategories
         src={strCategoryThumb}
-        onClick={() => handleClick(strCategory)}
+        onClick={() => handleNavigate(url)}
       />
-      <S.TitleCardCategories onClick={() => handleClick(strCategory)}>
+      <S.TitleCardCategories onClick={() => handleNavigate(url)}>
         {strCategory}
       </S.TitleCardCategories>
     </S.CardCategories>

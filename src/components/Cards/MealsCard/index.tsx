@@ -1,5 +1,5 @@
 import { Meal } from '@/types';
-import { useMealsCard } from './hook';
+import { useHandleNavigate } from '@/hooks/useHandleNavigate';
 import { useTags } from '@/hooks/useTags';
 
 import * as S from './style';
@@ -11,23 +11,23 @@ function MealsCard({
   strMealThumb,
   idMeal
 }: Partial<Meal>) {
-  const { handleClick } = useMealsCard();
-
-  const { handleNavigate } = useTags();
+  const { handleNavigate } = useHandleNavigate();
+  const { handleNavigateTags } = useTags();
+  const url = `/meal/${idMeal}`;
 
   return (
     <S.CardMeals>
-      <S.ImageWrapper onClick={() => handleClick(idMeal)}>
+      <S.ImageWrapper onClick={() => handleNavigate(url)}>
         <S.ImageCardMeals src={strMealThumb} />
       </S.ImageWrapper>
       <S.TextMealsCard>
-        <S.TitleMeals onClick={() => handleClick(idMeal)}>
+        <S.TitleMeals onClick={() => handleNavigate(url)}>
           {strMeal}
         </S.TitleMeals>
         {strArea && strCategory && (
           <S.TextWrapper>
             <S.Text>{strArea} /</S.Text>
-            <S.TextCategory onClick={() => handleNavigate(strCategory)}>
+            <S.TextCategory onClick={() => handleNavigateTags(strCategory)}>
               {strCategory}
             </S.TextCategory>
           </S.TextWrapper>
