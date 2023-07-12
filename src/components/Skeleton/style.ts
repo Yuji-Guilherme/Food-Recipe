@@ -22,8 +22,8 @@ const SkeletonContainer = styled.div<SkeletonContainerProps>`
     width: ${width}px;
     display: flex;
     flex-direction: column;
-    margin-bottom: ${marginB}px;
     gap: ${spacing}px;
+    margin-bottom: ${marginB}px;
 
     @media only screen and (max-device-width: 450px) {
       width: ${smWidthPercent ? `${smWidthPercent}%` : `${width}px`};
@@ -33,14 +33,14 @@ const SkeletonContainer = styled.div<SkeletonContainerProps>`
 
 const SkeletonContent = styled.div<SkeletonContentProps>`
   ${({ height, border, smallHeight, smallHeight2 }) => css`
-    height: ${height}px;
     width: 100%;
+    height: ${height}px;
     border-radius: ${border}px;
-    opacity: 0.5;
     background: linear-gradient(-90deg, #eee 0%, #c7c7c7 50%, #eee 100%);
     background-size: 400% 400%;
-    cursor: progress;
+    opacity: 0.5;
     animation: ${animation} 1.2s ease-in-out infinite;
+    cursor: progress;
 
     @media only screen and (max-device-width: 450px) {
       height: ${smallHeight2 ? smallHeight2 : smallHeight}px;

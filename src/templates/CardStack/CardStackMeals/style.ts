@@ -42,8 +42,8 @@ const CardStackMeals = styled(CardStack)`
     width: 85%;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
     gap: 42px;
+    margin: 0 auto;
   }
 `;
 

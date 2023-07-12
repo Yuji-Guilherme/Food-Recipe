@@ -20,8 +20,8 @@ const SectionCategories = styled(Section)`
 const TitleCategoriesWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin: 24px 0px 32px 24px;
   gap: 8px;
+  margin: 24px 0px 32px 24px;
 
   @media only screen and (max-device-width: 1024px) {
     margin: 0 0 32px 32px;

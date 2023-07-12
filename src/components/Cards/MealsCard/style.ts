@@ -17,12 +17,12 @@ const CardMeals = styled(Card)`
 
   @media only screen and (max-device-width: 450px) {
     width: 100%;
-    border-radius: 34px;
     background: linear-gradient(
       180deg,
       rgb(0 0 0 / 0%) 50%,
       rgb(0 0 0 / 60%) 100%
     );
+    border-radius: 34px;
     position: relative;
   }
 `;
@@ -47,8 +47,8 @@ const ImageCardMeals = styled(ImageCard)`
   cursor: pointer;
 
   @media only screen and (max-device-width: 450px) {
-    position: relative;
     border-radius: 34px;
+    position: relative;
     z-index: -1;
   }
 `;
@@ -82,8 +82,8 @@ const TextWrapper = styled.div`
   @media only screen and (max-device-width: 450px) {
     width: fit-content;
     background-color: #fffdeb21;
-    padding: 4px 12px;
     border-radius: 10px 10px 3px;
+    padding: 4px 12px;
   }
 `;
 
@@ -91,9 +91,9 @@ const TextCategory = styled(Text)`
   margin-left: 4px;
 
   &:hover {
-    cursor: pointer;
     color: var(--dark-blue-1);
     transition: 0.5s;
+    cursor: pointer;
   }
 `;
 

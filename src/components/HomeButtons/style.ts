@@ -5,31 +5,30 @@ type LogoProps = {
 };
 
 const BtnR = styled.a`
-  height: 88px;
   width: 368px;
+  height: 88px;
   font-size: 3rem;
-  background-color: transparent;
-  color: var(--dark-blue-1);
   font-weight: 600;
-  border: 6px solid var(--dark-blue-1);
-  border-radius: 26px 26px 12px;
+  color: var(--dark-blue-1);
+  background-color: transparent;
   display: flex;
   align-items: center;
-  align-content: center;
   justify-content: space-evenly;
+  border: 6px solid var(--dark-blue-1);
+  border-radius: 26px 26px 12px;
   position: relative;
 
   &::before {
     content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 0%;
     height: 102%;
-    z-index: -1;
-    border-radius: 16px 16px 2px;
     background-color: var(--dark-blue-1);
+    border-radius: 16px 16px 2px;
+    top: 0;
+    left: 0;
     transition: 0.4s ease-out;
+    position: absolute;
+    z-index: -1;
   }
 
   &:hover {
@@ -46,20 +45,20 @@ const BtnR = styled.a`
   }
 
   @media only screen and (max-device-width: 1024px) {
-    height: 80px;
     width: 286px;
+    height: 80px;
     font-size: 2rem;
     border-width: 5px;
   }
 
   @media only screen and (max-device-width: 768px) {
-    height: 76px;
     width: 270px;
+    height: 76px;
   }
 
   @media only screen and (max-device-width: 450px) {
-    height: 80px;
     width: 100%;
+    height: 80px;
     font-size: 2.6rem;
     border-width: 7px;
     border-radius: 22px 22px 8px;
@@ -68,8 +67,8 @@ const BtnR = styled.a`
   @media only screen and (max-device-width: 375px) {
     height: 70px;
     font-size: 2rem;
-    border-radius: 20px 20px 8px;
     border-width: 5px;
+    border-radius: 20px 20px 8px;
 
     &:hover {
       color: var(--dark-blue-1);
@@ -92,9 +91,9 @@ const BtnL = styled(BtnR)`
   gap: 46px;
 
   &::before {
+    border-radius: 16px 16px 16px 2px;
     left: auto;
     right: 0;
-    border-radius: 16px 16px 16px 2px;
   }
 
   @media only screen and (max-device-width: 1024px) {
@@ -103,8 +102,8 @@ const BtnL = styled(BtnR)`
   }
 
   @media only screen and (max-device-width: 450px) {
-    background-color: var(--dark-blue-1);
     color: var(--light-primary);
+    background-color: var(--dark-blue-1);
     border-radius: 22px 22px 22px 8px;
   }
 
@@ -115,12 +114,12 @@ const BtnL = styled(BtnR)`
 
 const ArrowL = styled.div<LogoProps>`
   ${({ svg }) => css`
-    transform: rotate(-180deg);
     width: 88px;
     height: 26px;
     background-color: var(--dark-blue-1);
     mask-image: url(${svg});
     mask-size: cover;
+    transform: rotate(-180deg);
     transition: 0.2s ease-in-out;
 
     @media only screen and (max-device-width: 1024px) {
@@ -143,8 +142,8 @@ const ArrowL = styled.div<LogoProps>`
 
 const ArrowR = styled(ArrowL)<LogoProps>`
   ${({ svg }) => css`
-    transform: rotate(0);
     mask-image: url(${svg});
+    transform: rotate(0);
 
     @media only screen and (max-device-width: 450px) {
       background-color: var(--dark-blue-1);
@@ -153,14 +152,14 @@ const ArrowR = styled(ArrowL)<LogoProps>`
 `;
 
 const BtnC = styled.a`
-  height: 88px;
   width: 88px;
+  height: 88px;
   background-color: transparent;
-  border: 6px solid var(--dark-blue-1);
-  border-radius: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 6px solid var(--dark-blue-1);
+  border-radius: 28px;
   transition: 0.2s;
 
   &:hover {
@@ -172,19 +171,19 @@ const BtnC = styled.a`
   }
 
   @media only screen and (max-device-width: 1024px) {
-    height: 80px;
     width: 80px;
+    height: 80px;
     border-width: 5px;
   }
 
   @media only screen and (max-device-width: 768px) {
-    height: 76px;
     width: 76px;
+    height: 76px;
   }
 
   @media only screen and (max-device-width: 450px) {
-    height: 80px;
     width: 80px;
+    height: 80px;
     grid-area: 3;
   }
 

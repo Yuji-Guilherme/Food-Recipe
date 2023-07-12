@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 const Container = styled.section`
-  display: flex;
   width: 765px;
   height: 425px;
-  margin: 8% auto 0;
-  justify-content: space-evenly;
+  display: flex;
   align-items: center;
-  border-radius: 80px;
+  justify-content: space-evenly;
   border: 16px solid var(--dark-blue-1);
+  border-radius: 80px;
+  margin: 8% auto 0;
 
   @media only screen and (max-device-height: 1000px) {
     margin-top: 6%;
@@ -27,40 +27,40 @@ const Container = styled.section`
   @media only screen and (max-device-width: 450px) {
     width: 84%;
     height: 50%;
-    padding: 7% 0;
-    border-radius: 64px;
-    border-width: 12px;
     flex-direction: column;
     justify-content: space-between;
+    border-width: 12px;
+    border-radius: 64px;
+    padding: 7% 0;
   }
 
   @media only screen and (max-device-width: 375px) {
     width: 72%;
     height: 345px;
-    padding: 5% 0;
-    border-radius: 50px;
     border-width: 10px;
+    border-radius: 50px;
+    padding: 5% 0;
   }
 `;
 
 const Title = styled.h1`
-  font-size: 10rem;
-  line-height: 1.3;
-  font-weight: 700;
-  color: var(--dark-blue-1);
   max-width: 350px;
+  font-size: 10rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--dark-blue-1);
 
   @media only screen and (max-device-width: 1024px) {
+    max-width: 290px;
     font-size: 8.2rem;
     line-height: 1.4;
-    max-width: 290px;
   }
 
   @media only screen and (max-device-width: 450px) {
     max-width: fit-content;
-    text-align: center;
     font-size: 7rem;
     line-height: 1.3;
+    text-align: center;
   }
 
   @media only screen and (max-device-width: 375px) {
@@ -70,8 +70,8 @@ const Title = styled.h1`
 `;
 
 const BtnContainer = styled.section`
-  display: flex;
   width: 72%;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 10% auto 0;

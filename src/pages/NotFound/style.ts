@@ -10,8 +10,8 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 14vh;
   gap: 50px;
+  margin-top: 14vh;
 `;
 
 const TextWrapper = styled.div`
@@ -32,8 +32,8 @@ const SubTitle = styled.h2`
 `;
 
 const Button = styled.button`
-  height: 72px;
   width: 260px;
+  height: 72px;
   font-size: 1.8rem;
   font-weight: 600;
   color: var(--dark-blue-2);

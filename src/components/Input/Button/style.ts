@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 const SrcButton = styled.button`
   height: 26px;
+  font-size: 1.6rem;
   background-color: transparent;
   margin-top: 2px;
-  font-size: 1.6rem;
 
   > svg {
     font-size: 1.8rem;
@@ -13,8 +13,8 @@ const SrcButton = styled.button`
 `;
 
 const RmvButton = styled(SrcButton)`
-  padding-right: 8px;
   border-right: solid 1px #beb3b38f;
+  padding-right: 8px;
   margin: 2px 8px 0 6px;
 
   > svg {

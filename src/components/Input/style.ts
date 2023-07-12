@@ -10,8 +10,8 @@ const Section = styled.section<SectionProps>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 72px 0;
   gap: 40px;
+  margin: 72px 0;
   transform: translateY(${({ up }) => (up ? '0px' : '100px')});
   transition: all 0.3s ease-out 0s;
 
@@ -21,22 +21,22 @@ const Section = styled.section<SectionProps>`
 
   @media only screen and (max-device-width: 450px) {
     align-items: flex-start;
-    margin: 28px 0;
     gap: 10px;
+    margin: 28px 0;
     transform: translateY(0px);
   }
 `;
 
 const InputContainer = styled.div`
-  height: 56px;
   width: 50%;
   min-width: 350px;
   max-width: 600px;
+  height: 56px;
   background-color: transparent;
-  border: 3px solid var(--dark-blue-1);
-  border-radius: 16px 16px 7px;
   display: flex;
   align-items: center;
+  border: 3px solid var(--dark-blue-1);
+  border-radius: 16px 16px 7px;
   padding: 0 20px;
 
   &:hover {
@@ -50,9 +50,9 @@ const InputContainer = styled.div`
   @media only screen and (max-device-width: 450px) {
     width: 90%;
     height: 50px;
+    border-radius: 14px 14px 7px;
     padding: 0px 12px;
     margin: 8px auto 0;
-    border-radius: 14px 14px 7px;
   }
 `;
 

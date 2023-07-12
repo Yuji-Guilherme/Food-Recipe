@@ -5,8 +5,8 @@ import { ErrorMessage } from '@/templates/CardStack/style';
 const Section = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 25px 80px 80px;
   gap: 20px 90px;
+  margin: 25px 80px 80px;
 
   @media only screen and (max-device-width: 1024px) {
     display: flex;
@@ -15,8 +15,8 @@ const Section = styled.section`
   }
 
   @media only screen and (max-device-width: 450px) {
-    margin: 24px 10px 80px;
     gap: 28px;
+    margin: 24px 10px 80px;
   }
 `;
 
@@ -31,9 +31,9 @@ const TextWrapper = styled.div`
   }
 
   @media only screen and (max-device-width: 450px) {
+    width: 90%;
     flex-direction: column;
     align-items: center;
-    width: 90%;
     gap: 8px;
   }
 `;
@@ -123,9 +123,9 @@ const InstructionSection = styled.section`
   display: flex;
   flex-direction: column;
   grid-column: 1/3;
+  gap: 16px;
   margin-top: 10px;
   margin-left: 8px;
-  gap: 16px;
 
   @media only screen and (max-device-width: 450px) {
     align-self: center;

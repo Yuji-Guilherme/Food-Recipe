@@ -6,8 +6,8 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20vh;
   gap: 22px;
+  margin-top: 20vh;
 `;
 
 const Title = styled.h1`

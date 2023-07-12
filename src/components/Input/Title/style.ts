@@ -6,8 +6,8 @@ const TitleWrapper = styled.div`
   gap: 12px;
 
   @media only screen and (max-device-width: 450px) {
-    margin-left: 12px;
     gap: 6px;
+    margin-left: 12px;
   }
 `;
 

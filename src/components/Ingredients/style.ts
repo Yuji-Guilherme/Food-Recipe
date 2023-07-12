@@ -23,8 +23,8 @@ const IngredientsWrapper = styled.ul`
   column-gap: 42px;
 
   @media only screen and (max-device-width: 1024px) {
-    column-gap: 80px;
     padding-left: 32px;
+    column-gap: 80px;
   }
 
   @media only screen and (max-device-width: 450px) {

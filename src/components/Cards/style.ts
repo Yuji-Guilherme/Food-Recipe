@@ -3,8 +3,8 @@ import styled from 'styled-components';
 const Card = styled.li`
   height: auto;
   display: flex;
-  -webkit-box-align: center;
   flex-direction: column;
+  -webkit-box-align: center;
 `;
 
 const ImageCard = styled.img`

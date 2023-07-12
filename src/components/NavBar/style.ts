@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const NavBar = styled.nav`
   width: 94%;
-  margin: 0 auto;
   height: 68px;
   background-color: var(--body-color);
   box-shadow: var(--dark-blue-1) 0px -1px 0px inset;
@@ -11,6 +10,7 @@ const NavBar = styled.nav`
   align-items: center;
   justify-content: center;
   gap: 72px;
+  margin: 0 auto;
 
   & > a {
     font-weight: 500;
@@ -36,7 +36,6 @@ const NavBar = styled.nav`
     grid-template-rows: 1fr;
     justify-items: center;
     gap: 2px;
-    justify-content: space-around;
 
     & > a {
       width: fit-content;
