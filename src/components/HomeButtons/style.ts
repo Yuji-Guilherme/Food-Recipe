@@ -62,13 +62,6 @@ const BtnR = styled.a`
     font-size: 2.6rem;
     border-width: 7px;
     border-radius: 22px 22px 8px;
-  }
-
-  @media only screen and (max-device-width: 375px) {
-    height: 70px;
-    font-size: 2rem;
-    border-width: 5px;
-    border-radius: 20px 20px 8px;
 
     &:hover {
       color: var(--dark-blue-1);
@@ -81,6 +74,13 @@ const BtnR = styled.a`
         background-color: var(--dark-blue-1);
       }
     }
+  }
+
+  @media only screen and (max-device-width: 375px) {
+    height: 70px;
+    font-size: 2rem;
+    border-width: 5px;
+    border-radius: 20px 20px 8px;
   }
 `;
 
@@ -105,6 +105,14 @@ const BtnL = styled(BtnR)`
     color: var(--light-primary);
     background-color: var(--dark-blue-1);
     border-radius: 22px 22px 22px 8px;
+
+    &:hover {
+      color: var(--light-primary);
+
+      > div {
+        background-color: var(--light-primary);
+      }
+    }
   }
 
   @media only screen and (max-device-width: 375px) {
