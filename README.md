@@ -1,7 +1,7 @@
 # 🍴 Free-Recipe
-![Search](https://github.com/Yuji-Guilherme/Food-Recipe/assets/102609444/cf0dfb11-abfe-44e3-9bfb-6b65f539854e)
+![Home](https://github.com/Yuji-Guilherme/Free-Recipe/assets/102609444/2def857b-efe0-4329-8f4e-b555bed6ce3f)
 
-## ✔ Resumodo do projeto
+## ✔ Resumo do projeto
 Website de receitas utilizando a Api [TheMealDB](https://themealdb.com/api.php). Visando a prática de React com Typescript.
 
 ### Funcionalidades
@@ -24,11 +24,15 @@ Na aplicação é possível:
 - ``Skeleton Loading``
 - ``Abort Controller``
 
+## 🔍  Pesquisa
+![search](https://github.com/Yuji-Guilherme/Free-Recipe/assets/102609444/9333f088-e042-434e-b8c7-b11ebedb20a6)
+
 ## 💀 Skeleton Loading
-![Skeleton](https://github.com/Yuji-Guilherme/Food-Recipe/assets/102609444/260c8d0b-5f4c-4316-b459-fb3fab39254c)
+![Loading](https://github.com/Yuji-Guilherme/Free-Recipe/assets/102609444/f8f8e3cc-3f3c-44c2-bd75-df21d02940a9)
 
 ## Página não encontrada
-![Notfound](https://github.com/Yuji-Guilherme/Food-Recipe/assets/102609444/1c7bbcb3-4712-4485-a5a3-33698b561a8f)
+![NotFound](https://github.com/Yuji-Guilherme/Free-Recipe/assets/102609444/c396b701-153b-4360-bb1e-b6568f7a5a6a)
 
 ## ❌ Página de erro
-![error boundary](https://github.com/Yuji-Guilherme/Food-Recipe/assets/102609444/0aa3182c-e808-43cf-97ff-0434de2120c6)
+![Error](https://github.com/Yuji-Guilherme/Free-Recipe/assets/102609444/218d2986-de77-4d64-9856-9dfe14843c95)
+
