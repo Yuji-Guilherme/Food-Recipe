@@ -35,7 +35,7 @@ const IngredientsWrapper = styled.ul`
 const Ingredient = styled.li`
   max-width: 300px;
   font-size: 1.6rem;
-  color: #2c3648;
+  color: var(--grey-text);
 `;
 
 export { IngredientSection, IngredientsWrapper, Ingredient, SecondaryTitle };

@@ -7,7 +7,7 @@ const Section = styled.section`
 const Title = styled.h2`
   font-size: 3.2rem;
   font-weight: 600;
-  color: #090e2a;
+  color: var(--dark-blue-1);
 
   @media only screen and (max-device-width: 450px) {
     font-size: 2.2rem;
@@ -24,7 +24,7 @@ const ErrorMessage = styled.h3`
   width: fit-content;
   font-size: 1.8rem;
   font-weight: 500;
-  color: #090e2a;
+  color: var(--dark-blue-1);
   margin: 40px auto 0;
 `;
 

@@ -9,9 +9,9 @@ const BtnR = styled.a`
   width: 368px;
   font-size: 3rem;
   background-color: transparent;
-  color: #090e2a;
+  color: var(--dark-blue-1);
   font-weight: 600;
-  border: 6px solid #090e2a;
+  border: 6px solid var(--dark-blue-1);
   border-radius: 26px 26px 12px;
   display: flex;
   align-items: center;
@@ -28,12 +28,12 @@ const BtnR = styled.a`
     height: 102%;
     z-index: -1;
     border-radius: 16px 16px 2px;
-    background-color: #090e2a;
+    background-color: var(--dark-blue-1);
     transition: 0.4s ease-out;
   }
 
   &:hover {
-    color: #fffdeb;
+    color: var(--light-primary);
     transition: 0.2s ease-in-out;
 
     ::before {
@@ -41,7 +41,7 @@ const BtnR = styled.a`
     }
 
     > div {
-      background-color: #fffdeb;
+      background-color: var(--light-primary);
     }
   }
 
@@ -72,14 +72,14 @@ const BtnR = styled.a`
     border-width: 5px;
 
     &:hover {
-      color: #090e2a;
+      color: var(--dark-blue-1);
 
       ::before {
         width: 0%;
       }
 
       > div {
-        background-color: #090e2a;
+        background-color: var(--dark-blue-1);
       }
     }
   }
@@ -103,8 +103,8 @@ const BtnL = styled(BtnR)`
   }
 
   @media only screen and (max-device-width: 450px) {
-    background-color: #090e2a;
-    color: #fffdeb;
+    background-color: var(--dark-blue-1);
+    color: var(--light-primary);
     border-radius: 22px 22px 22px 8px;
   }
 
@@ -118,7 +118,7 @@ const ArrowL = styled.div<LogoProps>`
     transform: rotate(-180deg);
     width: 88px;
     height: 26px;
-    background-color: #090e2a;
+    background-color: var(--dark-blue-1);
     mask-image: url(${svg});
     mask-size: cover;
     transition: 0.2s ease-in-out;
@@ -131,7 +131,7 @@ const ArrowL = styled.div<LogoProps>`
     @media only screen and (max-device-width: 450px) {
       width: 83px;
       height: 25px;
-      background-color: #fffdeb;
+      background-color: var(--light-primary);
     }
 
     @media only screen and (max-device-width: 375px) {
@@ -147,7 +147,7 @@ const ArrowR = styled(ArrowL)<LogoProps>`
     mask-image: url(${svg});
 
     @media only screen and (max-device-width: 450px) {
-      background-color: #090e2a;
+      background-color: var(--dark-blue-1);
     }
   `}
 `;
@@ -156,7 +156,7 @@ const BtnC = styled.a`
   height: 88px;
   width: 88px;
   background-color: transparent;
-  border: 6px solid #090e2a;
+  border: 6px solid var(--dark-blue-1);
   border-radius: 28px;
   display: flex;
   align-items: center;
@@ -164,10 +164,10 @@ const BtnC = styled.a`
   transition: 0.2s;
 
   &:hover {
-    background-color: #090e2a;
+    background-color: var(--dark-blue-1);
 
     > div {
-      background-color: #fffdeb;
+      background-color: var(--light-primary);
     }
   }
 
@@ -199,7 +199,7 @@ const GitHubLogo = styled.div<LogoProps>`
   ${({ svg }) => css`
     width: 52px;
     height: 50px;
-    background-color: #090e2a;
+    background-color: var(--dark-blue-1);
     mask-image: url(${svg});
     mask-size: cover;
     transition: 0.2s;

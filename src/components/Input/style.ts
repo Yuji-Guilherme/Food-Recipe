@@ -33,7 +33,7 @@ const InputContainer = styled.div`
   min-width: 350px;
   max-width: 600px;
   background-color: transparent;
-  border: 3px solid #090e2a;
+  border: 3px solid var(--dark-blue-1);
   border-radius: 16px 16px 7px;
   display: flex;
   align-items: center;
@@ -60,11 +60,11 @@ const Input = styled.input`
   width: 100%;
   font-size: 1.4rem;
   background-color: transparent;
-  color: #040614;
+  color: var(--input-text);
   border: none;
 
   &::placeholder {
-    color: #b3b19f;
+    color: var(--input-placeholder);
   }
 
   &:focus {

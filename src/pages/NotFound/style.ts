@@ -22,13 +22,13 @@ const TextWrapper = styled.div`
 const Title = styled.h1`
   font-size: 10rem;
   font-weight: 700;
-  color: #090e2a;
+  color: var(--dark-blue-1);
 `;
 
 const SubTitle = styled.h2`
   font-size: 4.5rem;
   font-weight: 500;
-  color: #0a1030;
+  color: var(--dark-blue-2);
 `;
 
 const Button = styled.button`
@@ -36,14 +36,14 @@ const Button = styled.button`
   width: 260px;
   font-size: 1.8rem;
   font-weight: 600;
-  color: #0a1030;
+  color: var(--dark-blue-2);
   background-color: transparent;
-  border: 4px solid #0a1030;
+  border: 4px solid var(--dark-blue-2);
   border-radius: 20px 20px 20px 8px;
 
   &:hover {
-    color: #fffdeb;
-    background-color: #0a1030;
+    color: var(--light-primary);
+    background-color: var(--dark-blue-2);
     transition: 0.3s;
   }
 `;

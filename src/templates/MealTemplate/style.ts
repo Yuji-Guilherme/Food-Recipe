@@ -41,7 +41,7 @@ const TextWrapper = styled.div`
 const Title = styled.h1`
   font-size: 3.2rem;
   font-weight: 600;
-  color: #0a1030;
+  color: var(--dark-blue-2);
 
   @media only screen and (max-device-width: 1024px) {
     font-size: 2.8rem;
@@ -60,7 +60,7 @@ const TagWrapper = styled.div`
 const Tag = styled.p`
   font-size: 1.6rem;
   font-weight: 500;
-  color: #686d88d6;
+  color: var(--grey-tags);
 `;
 
 const TagCategory = styled(Tag)`
@@ -68,7 +68,7 @@ const TagCategory = styled(Tag)`
   position: relative;
 
   &:hover {
-    color: #090e2a;
+    color: var(--dark-blue-1);
     transition: 0.5s;
     cursor: pointer;
   }
@@ -110,7 +110,7 @@ const SecondaryTitle = styled.h2`
   width: 100%;
   font-size: 2.6rem;
   font-weight: 600;
-  color: #282d46;
+  color: var(--light-grey-2);
 
   @media only screen and (max-device-width: 450px) {
     font-size: 2.2rem;
@@ -134,7 +134,7 @@ const InstructionSection = styled.section`
 
 const Instruction = styled.p`
   font-size: 1.6rem;
-  color: #2c3648;
+  color: var(--grey-text);
 
   @media only screen and (max-device-width: 450px) {
     padding: 0 16px;

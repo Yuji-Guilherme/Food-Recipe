@@ -71,7 +71,7 @@ const TitleMeals = styled(Title)`
 
   @media only screen and (max-device-width: 450px) {
     max-width: 270px;
-    color: #fffdeb;
+    color: var(--light-primary);
   }
 `;
 
@@ -92,7 +92,7 @@ const TextCategory = styled(Text)`
 
   &:hover {
     cursor: pointer;
-    color: #090e2a;
+    color: var(--dark-blue-1);
     transition: 0.5s;
   }
 `;

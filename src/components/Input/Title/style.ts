@@ -14,7 +14,7 @@ const TitleWrapper = styled.div`
 const Title = styled.h1`
   font-size: 3.8rem;
   font-weight: 600;
-  color: #090e2a;
+  color: var(--dark-blue-1);
 
   @media only screen and (max-device-width: 1024px) {
     font-size: 3rem;

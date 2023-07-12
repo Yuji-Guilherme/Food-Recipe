@@ -8,7 +8,7 @@ const SrcButton = styled.button`
 
   > svg {
     font-size: 1.8rem;
-    color: #090e2a;
+    color: var(--dark-blue-1);
   }
 `;
 
@@ -18,7 +18,7 @@ const RmvButton = styled(SrcButton)`
   margin: 2px 8px 0 6px;
 
   > svg {
-    color: var(--light-grey);
+    color: var(--input-placeholder);
   }
 `;
 

@@ -8,7 +8,7 @@ const Container = styled.section`
   justify-content: space-evenly;
   align-items: center;
   border-radius: 80px;
-  border: 16px solid #090e2a;
+  border: 16px solid var(--dark-blue-1);
 
   @media only screen and (max-device-height: 1000px) {
     margin-top: 6%;
@@ -47,7 +47,7 @@ const Title = styled.h1`
   font-size: 10rem;
   line-height: 1.3;
   font-weight: 700;
-  color: #090e2a;
+  color: var(--dark-blue-1);
   max-width: 350px;
 
   @media only screen and (max-device-width: 1024px) {

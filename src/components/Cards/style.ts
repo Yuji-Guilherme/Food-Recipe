@@ -25,17 +25,17 @@ const TextCard = styled.div`
 
 const Title = styled.h3`
   font-weight: 500;
-  color: #0a1030;
+  color: var(--dark-blue-2);
   overflow-wrap: break-word;
 `;
 
 const Text = styled.p`
   font-size: 1.4rem;
-  color: #586084;
+  color: var(--light-grey-1);
 
   @media only screen and (max-device-width: 450px) {
     font-size: 1.6rem;
-    color: #fffdeb;
+    color: var(--light-primary);
   }
 `;
 

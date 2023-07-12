@@ -9,7 +9,7 @@ const MiniLogo = styled.div<LogoProps>`
   ${({ svg, width, height }) => css`
     width: ${width}px;
     height: ${height}px;
-    background-color: #090e2a;
+    background-color: var(--dark-blue-1);
     mask-image: url(${svg});
     mask-size: cover;
 
