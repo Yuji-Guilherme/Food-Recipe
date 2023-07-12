@@ -27,6 +27,7 @@ function CardStackCategories() {
               border2={8}
               smWidthPercent={88}
               smallHeight={82}
+              smallHeight2={22}
             />
           ))}
         {categories?.map((item) => (

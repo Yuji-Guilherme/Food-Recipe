@@ -9,7 +9,7 @@ type SkeletonContainerProps = Pick<
 
 type SkeletonContentProps = Pick<
   SkeletonProps,
-  'height' | 'border' | 'smallHeight'
+  'height' | 'border' | 'smallHeight' | 'smallHeight2'
 >;
 
 const animation = keyframes`
@@ -32,7 +32,7 @@ const SkeletonContainer = styled.div<SkeletonContainerProps>`
 `;
 
 const SkeletonContent = styled.div<SkeletonContentProps>`
-  ${({ height, border, smallHeight }) => css`
+  ${({ height, border, smallHeight, smallHeight2 }) => css`
     height: ${height}px;
     width: 100%;
     border-radius: ${border}px;
@@ -43,7 +43,7 @@ const SkeletonContent = styled.div<SkeletonContentProps>`
     animation: ${animation} 1.2s ease-in-out infinite;
 
     @media only screen and (max-device-width: 450px) {
-      height: ${smallHeight}px;
+      height: ${smallHeight2 ? smallHeight2 : smallHeight}px;
     }
   `}
 `;

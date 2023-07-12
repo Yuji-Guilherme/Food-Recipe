@@ -8,5 +8,6 @@ export type SkeletonProps = {
   lines?: number;
   marginB?: number;
   smallHeight?: number;
+  smallHeight2?: number;
   smWidthPercent?: number;
 };

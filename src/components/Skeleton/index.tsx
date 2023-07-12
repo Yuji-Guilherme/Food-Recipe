@@ -12,6 +12,7 @@ function Skeleton({
   lines = 1,
   marginB = 0,
   smallHeight = 0,
+  smallHeight2 = 0,
   smWidthPercent = 0
 }: SkeletonProps) {
   return (
@@ -34,6 +35,7 @@ function Skeleton({
           height={height2}
           border={border2}
           smallHeight={smallHeight}
+          smallHeight2={smallHeight2}
         />
       ) : (
         ''
