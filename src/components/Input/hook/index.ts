@@ -1,5 +1,6 @@
-import { takeUntil } from '@/functions/utils';
+import { useUtilsStore } from '@/store/utils';
 import { useSearchStore } from '@/store/search';
+import { takeUntil } from '@/functions/utils';
 
 import { useEffect, useRef, useState } from 'react';
 
@@ -7,11 +8,19 @@ const useInput = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const [removeBtnIsOn, setRemoveBtnIsOn] = useState(false);
   const [upInput, setUpInput] = useState(false);
+
   const {
     actions: { clearSearch, setSearchMeal }
   } = useSearchStore();
 
-  useEffect(() => clearSearch(), [clearSearch]);
+  const {
+    actions: { initialState }
+  } = useUtilsStore();
+
+  useEffect(() => {
+    clearSearch();
+    initialState();
+  }, [clearSearch, initialState]);
 
   const inputFocus = () => {
     inputRef?.current?.focus();
