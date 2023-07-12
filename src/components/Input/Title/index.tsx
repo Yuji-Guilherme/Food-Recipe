@@ -1,4 +1,5 @@
 import { MiniLogo } from '@/components/MiniLogo';
+import { memo } from 'react';
 
 import * as S from './style';
 
@@ -11,4 +12,4 @@ function Title() {
   );
 }
 
-export { Title };
+export default memo(Title);
