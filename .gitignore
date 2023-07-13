@@ -3,6 +3,9 @@ logs
 *.log
 npm-debug.log*
 
+.eslintrc.json
+.prettierrc
+.vscode/
 node_modules
 dist
 dist-ssr
