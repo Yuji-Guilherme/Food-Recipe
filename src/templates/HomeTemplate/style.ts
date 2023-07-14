@@ -11,7 +11,7 @@ const Container = styled.section`
   margin: 8% auto 0;
 
   @media only screen and (max-device-height: 1000px) {
-    margin-top: 6%;
+    margin-top: 4%;
   }
 
   @media only screen and (max-device-width: 1024px) {
@@ -77,7 +77,8 @@ const BtnContainer = styled.section`
   margin: 10% auto 0;
 
   @media only screen and (max-device-height: 1000px) {
-    margin-top: 8%;
+    margin-top: 7%;
+    margin-bottom: 50px;
   }
 
   @media only screen and (max-device-width: 768px) {
